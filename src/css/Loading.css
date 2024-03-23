@@ -1,0 +1,135 @@
+html, body {
+  /* height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #550; */
+}
+
+.loading {
+  color: white;
+  /* height: 192px;
+  width: 192px; */
+  height: 160px;
+  width: 160px;
+  margin: 0 auto;
+  /* margin-top: 25%; */
+  border-radius: 50%;
+  text-align: center;
+}
+
+.loading span {
+  display: block;
+  height: 97%;
+  width: 97%;
+  /* height: 89%;
+  width: 89%; */
+  border: 1px solid transparent;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
+/* this was a fail. i'm not sure how to get the nested children. o_O */
+.loading span:nth-child(1) {
+  animation: spin 1.89s infinite linear;
+  -webkit-animation: spin 1.89s infinite linear;
+}
+
+/* this was a fail. i'm not sure how to get the nested children. o_O */
+.loading span:nth-child(2) {
+  animation: spin 2.78s infinite linear;
+  -webkit-animation: spin 2.78s infinite linear;
+}
+
+/* this was a fail. i'm not sure how to get the nested children. o_O */
+.loading span:nth-child(3) {
+  animation: spin 3.67s infinite linear;
+  -webkit-animation: spin 3.67s infinite linear;
+}
+
+/* this was a fail. i'm not sure how to get the nested children. o_O */
+.loading span:nth-child(4) {
+  animation: spin 4.56s infinite linear;
+  -webkit-animation: spin 4.56s infinite linear;
+}
+
+/* this was a fail. i'm not sure how to get the nested children. o_O */
+.loading span:nth-child(5) {
+  animation: spin 5.45s infinite linear;
+  -webkit-animation: spin 5.45s infinite linear;
+}
+
+/* this was a fail. i'm not sure how to get the nested children. o_O */
+.loading span:nth-child(6) {
+  animation: spin 6.34s infinite linear;
+  -webkit-animation: spin 6.34s infinite linear;
+}
+
+/* this was a fail. i'm not sure how to get the nested children. o_O */
+.loading span:nth-child(7) {
+  animation: spin 7.23s infinite linear;
+  -webkit-animation: spin 7.23s infinite linear;
+}
+
+/* this was a fail. i'm not sure how to get the nested children. o_O */
+.loading span:nth-child(8) {
+  animation: spin 8.12s infinite linear;
+  -webkit-animation: spin 8.12s infinite linear;
+}
+
+/* this was a fail. i'm not sure how to get the nested children. o_O */
+.loading span:nth-child(9) {
+  animation: spin 9.01s infinite linear;
+  -webkit-animation: spin 9.01s infinite linear;
+}
+
+/* this was a fail. i'm not sure how to get the nested children. o_O */
+.loading span:nth-child(10) {
+  animation: spin 9.9s infinite linear;
+  -webkit-animation: spin 9.9s infinite linear;
+}
+
+/* this was a fail. i'm not sure how to get the nested children. o_O */
+.loading span:nth-child(11) {
+  animation: spin 10.79s infinite linear;
+  -webkit-animation: spin 10.79s infinite linear;
+}
+
+/* this was a fail. i'm not sure how to get the nested children. o_O */
+.loading span:nth-child(12) {
+  animation: spin 11.68s infinite linear;
+  -webkit-animation: spin 11.68s infinite linear;
+}
+
+/* this was a fail. i'm not sure how to get the nested children. o_O */
+.loading span:nth-child(13) {
+  animation: spin 12.57s infinite linear;
+  -webkit-animation: spin 12.57s infinite linear;
+}
+
+/* this was a fail. i'm not sure how to get the nested children. o_O */
+.loading span:nth-child(14) {
+  animation: spin 13.46s infinite linear;
+  -webkit-animation: spin 13.46s infinite linear;
+}
+
+/* this was a fail. i'm not sure how to get the nested children. o_O */
+.loading span:nth-child(15) {
+  animation: spin 14.35s infinite linear;
+  -webkit-animation: spin 14.35s infinite linear;
+}
+
+/* this was a fail. i'm not sure how to get the nested children. o_O */
+.loading span:nth-child(16) {
+  animation: spin 15.24s infinite linear;
+  -webkit-animation: spin 15.24s infinite linear;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}

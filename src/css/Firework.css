@@ -1,0 +1,127 @@
+.sky{
+  /* background: #00000022; */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* filter: contrast(150%) grayscale(100%); */
+  /* filter: contrast(150%); */
+}
+.hanabi{
+  position: absolute;
+  animation-name: hanabi;
+  animation-timing-function:linear;
+  animation-iteration-count :infinite;
+  
+  /* mix-blend-mode: overlay; 
+  mix-blend-mode: lighten; */
+  mix-blend-mode: color-dodge;
+}
+.hanabi_left {
+  top: -16%;
+  left: -9%;
+  animation-duration:3s;
+  animation-delay :0.8s;
+  zoom:150%;
+  opacity: 0;
+}
+.hanabi_left_middle {
+  top: 5%;
+  left: 2%;
+  animation-duration:3.7s;
+  animation-delay : 1.2s;
+  zoom:190%;
+  opacity: 0;
+}
+.hanabi_left_bottom1 {
+  top: 12%;
+  left: -6%;
+  animation-duration:2.2s;
+  animation-delay : 1.3s;
+  zoom:90%;
+  opacity: 0;
+}
+.hanabi_left_bottom2 {
+  top: 17%;
+  left: 4%;
+  animation-duration:1.9s;
+  animation-delay : 0.5s;
+  zoom:65%;
+  opacity: 0;
+}
+.hanabi_center{
+  top: -33%;
+  left: 30%;
+  animation-duration:2.2s;
+  animation-delay : 1.1s;
+  opacity: 0;
+}
+.hanabi_center_middle1{
+  top: 2%;
+  right: 19%;
+  animation-duration:3.8s;
+  animation-delay :1.3s;
+  zoom:220%;
+  opacity: 0;
+}
+.hanabi_center_middle2{
+  top: 13%;
+  right: 23%;
+  animation-duration:3.3s;
+  animation-delay :1.7s;
+  zoom:120%;
+  opacity: 0;
+}
+.hanabi_center_bottom{
+  top: 16%;
+  right: 18%;
+  animation-duration:3.8s;
+  animation-delay :0.9s;
+  zoom:250%;
+  opacity: 0;
+}
+.hanabi_right{
+  top: -28%;
+  right: -3%;
+  animation-duration:3.2s;
+  animation-delay :1s;
+  opacity: 0;
+  zoom:210%;
+}
+.hanabi_right_middle{
+  top: 15%;
+  right: 12%;
+  animation-duration:1.3s;
+  animation-delay :0.8s;
+  zoom:50%;
+  opacity: 0;
+}
+.hanabi_right_bottom{
+  top: 31%;
+  right: 2%;
+  animation-duration:1.8s;
+  animation-delay :1.3s;
+  zoom:80%;
+  opacity: 0;
+}
+
+@keyframes hanabi{
+	0%{
+		opacity: 0.4;
+		transform: scale(0.1);
+    filter: hue-rotate(0deg);
+	}
+	20%{
+		opacity: 1;
+		transform: scale(1);
+	}
+	65%{
+		opacity: 0.9;
+		transform: scale(1.1);
+	}
+	100%{
+		opacity: 0;
+		/* transform: scale(1.2) translateY(30px); */
+    transform: scale(1.2) translateY(6%);
+    filter: hue-rotate(360deg);
+	}
+}

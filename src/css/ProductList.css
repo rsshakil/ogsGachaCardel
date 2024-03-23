@@ -1,0 +1,308 @@
+.product-footer-panel--life-empty, .product-footer-panel--life-0, .product-footer-panel--life-5, .product-footer-panel--life-10, .product-footer-panel--life-15, .product-footer-panel--life-20,.product-footer-panel--life-25, .product-footer-panel--life-30, .product-footer-panel--life-35, .product-footer-panel--life-40,.product-footer-panel--life-45, .product-footer-panel--life-50, .product-footer-panel--life-55, .product-footer-panel--life-60,.product-footer-panel--life-65, .product-footer-panel--life-70, .product-footer-panel--life-75, .product-footer-panel--life-80,.product-footer-panel--life-85, .product-footer-panel--life-90, .product-footer-panel--life-95, .product-footer-panel--life-100 {
+  content: "";
+  position: relative;
+  height: 32px;
+  right: 4px;
+  clip-path: polygon(10% 0, 97% 0, 100% 24%, 100% 76%, 97% 99%, 0 100%);
+
+  background: rgba(0, 0, 0, 0.8)0%;
+  background: linear-gradient(
+    -45deg,
+    rgba(0, 0, 0, 0.8)72%,
+    rgba(44, 44, 44, 0.8)72.5%,
+    rgba(65, 59, 45, 0.7)73%,
+    rgba(44, 44, 44, 0.8)73.5%,
+    rgba(0, 0, 0, 0.8)74%,
+    rgba(44, 44, 44, 0.8)74.5%,
+    rgba(65, 59, 45, 0.7)75%,
+    rgba(56, 56, 56, 0.8)75.5%,
+    rgba(56, 56, 56, 0.8)80%,
+    rgba(0, 0, 0, 0.8)97%,
+    rgba(0, 0, 0, 0.8)100%
+    ) ;
+
+  background-size: 1200% 200%;
+  animation: shine3 1s infinite;
+  animation-delay: 0s;
+  animation-duration:60s;
+  animation-timing-function: linear;
+
+}
+.modalOpen .product-footer-panel--life-empty, .modalOpen .product-footer-panel--life-0, .modalOpen .product-footer-panel--life-5, .modalOpen .product-footer-panel--life-10, .modalOpen .product-footer-panel--life-15, .modalOpen .product-footer-panel--life-20,.modalOpen .product-footer-panel--life-25, .modalOpen .product-footer-panel--life-30, .modalOpen .product-footer-panel--life-35, .modalOpen .product-footer-panel--life-40, .modalOpen .product-footer-panel--life-45, .modalOpen .product-footer-panel--life-50, .modalOpen .product-footer-panel--life-55, .modalOpen .product-footer-panel--life-60,.modalOpen .product-footer-panel--life-65, .modalOpen .product-footer-panel--life-70, .modalOpen .product-footer-panel--life-75, .modalOpen .product-footer-panel--life-80, .modalOpen .product-footer-panel--life-85, .modalOpen .product-footer-panel--life-90, .modalOpen .product-footer-panel--life-95, .modalOpen .product-footer-panel--life-100,
+.soldOutClass .product-footer-panel--life-empty,
+.soldOutClass .product-footer-panel--life-0, 
+.soldOutClass .product-footer-panel--life-5, 
+.soldOutClass .product-footer-panel--life-10, 
+.soldOutClass .product-footer-panel--life-15, 
+.soldOutClass .product-footer-panel--life-20,
+.soldOutClass .product-footer-panel--life-25, 
+.soldOutClass .product-footer-panel--life-30, 
+.soldOutClass .product-footer-panel--life-35, 
+.soldOutClass .product-footer-panel--life-40, 
+.soldOutClass .product-footer-panel--life-45, 
+.soldOutClass .product-footer-panel--life-50, 
+.soldOutClass .product-footer-panel--life-55, 
+.soldOutClass .product-footer-panel--life-60,
+.soldOutClass .product-footer-panel--life-65, 
+.soldOutClass .product-footer-panel--life-70, 
+.soldOutClass .product-footer-panel--life-75, 
+.soldOutClass .product-footer-panel--life-80, 
+.soldOutClass .product-footer-panel--life-85, 
+.soldOutClass .product-footer-panel--life-90, 
+.soldOutClass .product-footer-panel--life-95, 
+.soldOutClass .product-footer-panel--life-100,
+.countdownClass .product-footer-panel--life-empty,
+.countdownClass .product-footer-panel--life-0, 
+.countdownClass .product-footer-panel--life-5, 
+.countdownClass .product-footer-panel--life-10, 
+.countdownClass .product-footer-panel--life-15, 
+.countdownClass .product-footer-panel--life-20,
+.countdownClass .product-footer-panel--life-25, 
+.countdownClass .product-footer-panel--life-30, 
+.countdownClass .product-footer-panel--life-35, 
+.countdownClass .product-footer-panel--life-40, 
+.countdownClass .product-footer-panel--life-45, 
+.countdownClass .product-footer-panel--life-50, 
+.countdownClass .product-footer-panel--life-55, 
+.countdownClass .product-footer-panel--life-60,
+.countdownClass .product-footer-panel--life-65, 
+.countdownClass .product-footer-panel--life-70, 
+.countdownClass .product-footer-panel--life-75, 
+.countdownClass .product-footer-panel--life-80, 
+.countdownClass .product-footer-panel--life-85, 
+.countdownClass .product-footer-panel--life-90, 
+.countdownClass .product-footer-panel--life-95, 
+.countdownClass .product-footer-panel--life-100
+{
+  animation: none;
+}
+
+
+
+.product-footer-panel--life-empty::after, .product-footer-panel--life-0::after, .product-footer-panel--life-5::after, .product-footer-panel--life-10::after, .product-footer-panel--life-15::after,.product-footer-panel--life-20::after, .product-footer-panel--life-25::after, .product-footer-panel--life-30::after,.product-footer-panel--life-35::after, .product-footer-panel--life-40::after, .product-footer-panel--life-45::after,.product-footer-panel--life-50::after, .product-footer-panel--life-55::after, .product-footer-panel--life-60::after,.product-footer-panel--life-65::after, .product-footer-panel--life-70::after, .product-footer-panel--life-75::after,.product-footer-panel--life-80::after, .product-footer-panel--life-85::after, .product-footer-panel--life-90::after,.product-footer-panel--life-95::after, .product-footer-panel--life-100::after {
+  content: "";
+	position: absolute;
+  top: 0;
+	right: 0px;
+	bottom: 0;
+	left: 0;
+  /* background: linear-gradient(
+    20deg, 
+    #413324, 
+    #c3c3a2, 
+    #755f3d ,
+    #a19c89,
+    #785831, 
+    #656549, 
+    #af9f6c , 
+    #878374,
+    #76705c, 
+    #544737,
+    #726a22,
+    #cbb988, 
+    #cbb988, 
+    #c3c3a2, 
+    #755f3d , 
+    #878374,  
+    #3b3021, 
+    #c3c3a2, 
+    #755f3d , 
+    #878374, 
+    #d5b692, 
+    #c3c3a2, 
+    #af9f6c
+    ); */
+
+    background: repeating-linear-gradient(
+      -90deg,
+      rgb(78, 73, 47),
+      rgb(90, 74, 45),
+      rgba(99,95,86,1), 
+      rgb(122, 109, 70), 
+      rgb(112, 93, 54), 
+      rgb(94, 86, 40), 
+      rgb(86, 84, 40), 
+      rgb(85, 85, 41), 
+      rgb(101, 85, 28), 
+      rgb(153, 130, 2),
+      rgb(79, 61, 9),
+      rgb(90, 69, 13) 3px
+      ),
+  repeating-linear-gradient(
+      135deg,
+      hsla(0,0%,100%,0) 0%, 
+      hsla(0,0%,100%,0) 1px, 
+      hsla(0,0%,100%,.15) 2px
+      ),
+  linear-gradient(
+      135deg, 
+      hsl(60, 78%, 79%)  0%,
+      hsl(42, 32%, 51%) 37%, 
+      hsl(51, 38%, 34%) 76%,
+      hsl(50, 66%, 21%) 100%)        
+  ;
+        background-blend-mode:
+        lighten /*03*/,
+        overlay /*02*/,
+        normal /*01*/
+        ;
+
+  background-size: 120%,200%;
+  clip-path: polygon(9% 0, 97% 0, 100% 16%, 100% 85%, 97% 100%, 0 100%, 0 88%, 96% 88%, 98.5% 73%, 98.5% 26.5%, 96.5% 12%, 50% 12%, 47% 40%, 8% 40%, 3% 89%, 0 88%);
+
+}
+
+.remaining-number {
+  /* text-shadow: 2px 2px 0 #ffffff,2px -2px 0 #ffffff,-2px 2px 0 #ffffff,-2px -2px 0 #ffffff; */
+  text-shadow: 1px 1px 0 #ffffff,1px -1px 0 #ffffff,-1px 1px 0 #ffffff,-1px -1px 0 #ffffff;
+  color: #000000;
+}
+
+
+
+/* .product-footer-panel::before {
+  content: "";
+	position: absolute;
+  top: 0;
+	right: 0px;
+	bottom: 0;
+	left: 0;
+  border-top: 4px solid ;
+  border-image: linear-gradient(to bottom left, #2e2e28, #c3c3a2, #755f3d , #878374, #3b3b24, #c3c3a2, #af9f6c , #878374, #2e2e28, #cbb988, #2e2e28);
+  border-image-slice: 1;
+} */
+
+@keyframes shine3 {
+	0% {
+		background-position-x: 1200%;
+    background-position-y: 0%;
+	}
+	50% {
+		background-position-x: 0%;
+    background-position-y: 0%;
+	}
+	100% {
+		background-position-x: -1200%;
+    background-position-y: 0%;
+	}
+}
+
+.product-footer-name {
+  /* padding-left: 9%; */
+  z-index: 1;
+  font-size: 0.65rem;
+  line-height: 0.85rem;
+  color: #ffd9086b;
+  text-shadow: 0 -0.25px 0.25px #ffffff8b, 0.25px 0.25px 0.25px #000;
+}
+
+
+
+
+/* ._product-footer-panel {
+  display: inline-block;
+  background-color: #75723d;
+	font-size: 16px;
+	position: absolute;
+	color: #fff;
+	z-index: 1;
+  height: 48px;
+  right: 16px;
+  width: 76%;
+} */
+
+/* ._product-footer-panel::before {
+	content: "";
+	position: absolute;
+  border-bottom: 2px solid ;
+  border-image: linear-gradient(to bottom left, #2e2e28, #c3c3a2, #75723d , #878374, #3b3b24, #c3c3a2, #bdbcaa , #878374, #2e2e28, #c3c3a2, #2e2e28);
+  border-image-slice: 8;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+  background: linear-gradient(to bottom, rgb(0, 0, 0)55%, rgb(47, 47, 47)80%, rgb(0, 0, 0)100%);
+  opacity: 1;
+	transform: scaleY(2.0) perspective(.6em) rotateX(355deg);
+  transform-origin: bottom left;
+  border-right: 8px solid ;
+  border-radius: 0px 0px 8px 0px;
+} */
+
+/* ._product-footer-panel ::before {
+	content: "";
+	width: 150px;
+	position: absolute;
+	border-bottom: 64.95px solid #3cb371;
+	border-left: 37.5px solid transparent;
+	border-right: 37.5px solid transparent;
+	box-sizing: border-box;
+}
+
+._product-footer-panel ::after {
+	content: "";
+	width: 150px;
+	position: absolute;
+	top: 64.95px;
+	border-top: 64.95px solid #3cb371;
+	border-left: 37.5px solid transparent;
+	border-right: 37.5px solid transparent;
+	box-sizing: border-box;
+} */
+
+.product-footer-panel--life-empty::before, .product-footer-panel--life-0::before, .product-footer-panel--life-5::before, .product-footer-panel--life-10::before, .product-footer-panel--life-15::before, .product-footer-panel--life-20::before, .product-footer-panel--life-25::before, .product-footer-panel--life-30::before, .product-footer-panel--life-35::before, .product-footer-panel--life-40::before, .product-footer-panel--life-45::before, .product-footer-panel--life-50::before, .product-footer-panel--life-55::before, .product-footer-panel--life-60::before, .product-footer-panel--life-65::before, .product-footer-panel--life-70::before, .product-footer-panel--life-75::before, .product-footer-panel--life-80::before, .product-footer-panel--life-85::before, .product-footer-panel--life-90::before, .product-footer-panel--life-95::before, .product-footer-panel--life-100::before {
+  content: "";
+  /* width: 100%; */
+  position: absolute;
+  top: 0;
+  right: 0px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(0deg, rgba(81, 81, 81, 0.3)26%, rgba(255, 255, 255, 0.2)37%, rgba(255, 255, 255, 0.3)44%, rgba(255, 255, 255, 0.2)46%, rgba(255, 255, 255, 0.1)49%),linear-gradient(305deg, rgb(0, 255, 0)60%, rgb(255, 255, 0)76%, rgb(255, 0, 0)86%, rgb(255, 0, 0)90%);
+}
+
+.product-footer-panel--life-empty::before {clip-path: polygon(8.2% 48%, 8.2% 48%, 5% 80%, 5% 80%);}
+.product-footer-panel--life-0::before {
+  clip-path: polygon(8.2% 48%, 9.2% 48%, 6% 80%, 5% 80%);
+  animation: blinking2 0.3s ease-in-out infinite alternate;
+}
+
+.modalOpen .product-footer-panel--life-0::before,
+.soldOutClass .product-footer-panel--life-0::before,
+.countdownClass .product-footer-panel--life-0::before
+ {
+  animation: none;
+}
+.product-footer-panel--life-5::before {clip-path: polygon(8.2% 48%, 10.1150% 48%, 6.8750% 80%, 5% 80%);}
+.product-footer-panel--life-10::before {clip-path: polygon(8.2% 48%, 12.0300% 48%, 8.7500% 80%, 5% 80%);}
+.product-footer-panel--life-15::before {clip-path: polygon(8.2% 48%, 13.9450% 48%, 10.6250% 80%, 5% 80%);}
+.product-footer-panel--life-20::before {clip-path: polygon(8.2% 48%, 15.8600% 48%, 12.5000% 80%, 5% 80%);}
+.product-footer-panel--life-25::before {clip-path: polygon(8.2% 48%, 17.7750% 48%, 14.3750% 80%, 5% 80%);}
+.product-footer-panel--life-30::before {clip-path: polygon(8.2% 48%, 19.6900% 48%, 16.2500% 80%, 5% 80%);}
+.product-footer-panel--life-35::before {clip-path: polygon(8.2% 48%, 21.6050% 48%, 18.1250% 80%, 5% 80%);}
+.product-footer-panel--life-40::before {clip-path: polygon(8.2% 48%, 23.5200% 48%, 20.0000% 80%, 5% 80%);}
+.product-footer-panel--life-45::before {clip-path: polygon(8.2% 48%, 25.4350% 48%, 21.8750% 80%, 5% 80%);}
+.product-footer-panel--life-50::before {clip-path: polygon(8.2% 48%, 27.3500% 48%, 23.7500% 80%, 5% 80%);}
+.product-footer-panel--life-55::before {clip-path: polygon(8.2% 48%, 29.2650% 48%, 25.6250% 80%, 5% 80%);}
+.product-footer-panel--life-60::before {clip-path: polygon(8.2% 48%, 31.1800% 48%, 27.5000% 80%, 5% 80%);}
+.product-footer-panel--life-65::before {clip-path: polygon(8.2% 48%, 33.0950% 48%, 29.3750% 80%, 5% 80%);}
+.product-footer-panel--life-70::before {clip-path: polygon(8.2% 48%, 35.0100% 48%, 31.2500% 80%, 5% 80%);}
+.product-footer-panel--life-75::before {clip-path: polygon(8.2% 48%, 36.9250% 48%, 33.1250% 80%, 5% 80%);}
+.product-footer-panel--life-80::before {clip-path: polygon(8.2% 48%, 38.8400% 48%, 35.0000% 80%, 5% 80%);}
+.product-footer-panel--life-85::before {clip-path: polygon(8.2% 48%, 40.7550% 48%, 36.8750% 80%, 5% 80%);}
+.product-footer-panel--life-90::before {clip-path: polygon(8.2% 48%, 42.6700% 48%, 38.7500% 80%, 5% 80%);}
+.product-footer-panel--life-95::before {clip-path: polygon(8.2% 48%, 44.5850% 48%, 40.6250% 80%, 5% 80%);}
+.product-footer-panel--life-100::before {clip-path: polygon(8.2% 48%, 46.5% 48%, 42.5% 80%, 5% 80%);}
+
+@keyframes blinking2 {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+.soldOutClass {
+  filter: grayscale(100%);
+}
+.countdownClass {
+  filter: sepia(100%) saturate(.5);;
+
+}

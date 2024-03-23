@@ -1,0 +1,663 @@
+.center-button, .left-button, .right-button, .top-button {
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    /* 開始するタイミング */
+    animation-delay: 0ms;
+    /* １回分の長さ */
+    animation-duration: 1000ms;
+    background-size: 5px;
+    background: repeating-linear-gradient(
+      -90deg,
+      rgb(78, 73, 47),
+      rgb(90, 74, 45),
+      rgba(99,95,86,1), 
+      rgb(122, 109, 70), 
+      rgb(112, 93, 54), 
+      rgb(94, 86, 40), 
+      rgb(86, 84, 40), 
+      rgb(85, 85, 41), 
+      rgb(101, 85, 28), 
+      rgb(153, 130, 2),
+      rgb(79, 61, 9),
+      rgb(90, 69, 13) 3px
+      ),
+  repeating-linear-gradient(
+      90deg,
+      hsla(0,0%,100%,0) 0%, 
+      hsla(0,0%,100%,0) 1px, 
+      hsla(0,0%,100%,.15) 2px
+      ),
+  linear-gradient(
+      90deg, 
+      hsl(60, 78%, 79%)  0%,
+      hsl(42, 32%, 51%) 37%, 
+      hsl(51, 38%, 34%) 76%,
+      hsl(50, 66%, 21%) 100%)        
+  ;
+  background-blend-mode:
+  lighten /*03*/,
+  overlay /*02*/,
+  normal /*01*/
+  ;
+  }
+/* 一回だけ引くしかない時 */
+  .center-button {
+    padding-left: 32px;
+    padding-right: 32px;
+    width: 100%;
+    left: 0px;
+    animation-name:  left-right;
+    transform: translate(-256px, 0px);
+
+    /* clip-path: polygon(
+        3% 0%,
+        97% 0%,
+        100% 15%,
+        100% 85%,
+        97% 100%,
+        3% 100%,
+        0% 85%,
+        0% 15%
+    ); */
+  }
+
+
+.left-button {
+    width: 100%;
+    left: 0px;
+    animation-name:  left-right;
+    transform: translate(-256px, 0px);
+    /* clip-path: polygon(
+        2% 0%,
+        98% 0%,
+        99% 7%,
+        55% 7%,
+        45% 93%,
+        1% 93%,
+        0% 85%,
+        0% 15%
+    ); */
+    clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% 7%,
+        55% 7%,
+        45% 93%,
+        4% 93%,
+        0% 50%,
+        0% 15%
+    );
+  }
+  .play-button-1 .left-button{
+    padding-left: 32px;
+    padding-right: 64px;
+  }
+.right-button {
+    width: 100%;
+    right: 0px;
+    animation-name: right-left;
+    transform: translate(256px, 0px);
+    /* clip-path: polygon(
+        1% 93%,
+        45% 93%,
+        55% 7%,
+        99% 7%,
+        100% 15%,
+        100% 85%,
+        98% 100%,
+        2% 100%
+    ); */
+    clip-path: polygon(
+        4% 93%,
+        45% 93%,
+        55% 7%,
+        100% 7%,
+        100% 15%,
+        100% 55%,
+        95.3% 100%,
+        4.7% 100%
+    );
+  }
+
+  .play-button-2 .right-button{
+    padding-left: 64px;
+    padding-right: 32px;
+  }
+
+
+.top-button { 
+    width: 100%;
+    animation-name:  bottom-top;
+    transform: translateY( 97px);
+    padding-left: 32px;
+    padding-right: 32px;
+    /* clip-path: polygon(
+        4% 0%,
+
+        10% 0%,
+        12% 5%,
+
+        88% 5%,
+        90% 0%,
+
+        96% 0%,
+        98% 15%,
+
+        98% 85%,
+        96% 100%,
+
+        60% 100%,
+        58% 95%,
+        42% 95%,
+        40% 100%,
+
+        4% 100%,
+        2% 85%,
+        2% 15%
+      ); */
+      clip-path: polygon(
+        4.7% 0%,
+        95.3% 0%,
+        100% 45%,
+        100% 100%,
+        0% 100%,
+        0% 45%
+      );
+    }
+.PreRegistration.top-button { 
+  clip-path: unset;
+}
+
+@keyframes left-right {
+    0% {
+      transform: translate(-256px, 0px);
+    }
+    20% {
+      transform: translate(0px, 0px);
+    }
+    25% {
+      transform: translate(-12px, 0px);
+    }
+
+    30% {
+      transform: translate(0px, 0px);
+    }
+    60% {
+      transform: translate(0px, 0px);
+    }
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
+
+  @keyframes right-left {
+    0% {
+      transform: translate(256px, 0px);
+    }
+    20% {
+      transform: translate(0px, 0px);
+    }
+    25% {
+      transform: translate(12px, 0px);
+    }
+    30% {
+      transform: translate(0px, 0px);
+    }
+    60% {
+      transform: translate(0px, 0px);
+    }
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
+
+  @keyframes bottom-top {
+    0% {
+    transform: translateY( 97px);
+    }
+    50% {
+      transform: translateY( 97px);
+    }
+    60% {
+        transform: translateY( 97px);
+      }
+    70% {
+      transform: translateY( -24px);
+    }
+    80% {
+      transform: translateY( 16px);
+    }
+    90% {
+      transform: translateY( -8px);
+    }
+    100% {
+    transform: translateY(2.3px);
+    }
+  }
+ 
+
+
+  .button-full, .button-half-left, .button-half-right {
+    cursor: pointer;
+    font-size:15px;
+    font-family:Arial;
+    height:42px;
+    border-width:2px;
+    color:#ffffff;
+    border-image: linear-gradient(to bottom left, #2e2e28, #c3c3a2, #75723d , #878374, #3b3b24, #c3c3a2, #bdbcaa , #878374, #2e2e28, #c3c3a2, #2e2e28);
+    border-image-slice: 6;
+    font-weight:bold;
+    border-top-left-radius:0px;
+    border-top-right-radius:0px;
+    border-bottom-left-radius:0px;
+    border-bottom-right-radius:0px;
+    box-shadow:
+      inset 0px 2px 0px 0px rgb(255, 60, 60),
+      inset 0px 4px 0px 0px rgb(255, 70, 70),
+      inset 0px 6px 0px 0px rgb(254, 84, 84),
+      inset 0px 8px 0px 0px rgb(255, 80, 80),
+      inset 0px 10px 0px 0px rgb(248, 86, 86),
+      inset 0px 14px 0px 0px rgb(249, 91, 91),
+      inset 0px 16px 0px 0px rgb(252, 98, 98),
+      inset 0px 19px 0px 0px rgb(255, 108, 108);
+
+    text-shadow:inset 0px 1px 0px #b23e35;
+    background:linear-gradient(#ff3232, rgb(224, 58, 58), rgb(128, 0, 0));
+  }
+  /* ボタンの設定　全体の設定なのでどこかに移す */
+  .button-full {
+    width:100%;
+  }
+  .button-half-left {
+    margin-left: 0%;
+    width:48%;
+  }
+  .button-half-right {
+    margin-right: 0%;
+    width:48%;
+  }
+
+  #ButtonWrapShowCollection .button-half-left {
+    margin-left: 0%;
+    width:48%;
+  }
+  #ButtonWrapShowCollection .button-half-right {
+    margin-right: 0%;
+    width:48%;
+  }
+
+  .button-full:hover, .button-half-left:hover, .button-half-right:hover {
+    opacity: 0.8;
+  }
+
+  .button-full:active, .button-half-left:active, .button-half-right:active {
+    opacity: 0.6;
+  }
+
+
+  .kira {
+    animation-name:kira;
+    /* transform-origin:center; */
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count:infinite;
+  }
+  .rand-1 {
+    animation-name:kira1;
+    /* 開始するタイミング */
+    animation-delay: 0ms;
+    /* １回分の長さ */
+    animation-duration: 1527ms;
+  }
+  .rand-2 {
+    animation-name:kira2;
+    /* 開始するタイミング */
+    animation-delay: 333ms;
+    /* １回分の長さ */
+    animation-duration: 1750ms;
+  }
+  .rand-3 {
+    animation-name:kira3;
+    /* 開始するタイミング */
+    animation-delay: 555ms;
+    /* １回分の長さ */
+    animation-duration: 1917ms;
+  }
+  .rand-4 {
+    animation-name:kira4;
+    /* 開始するタイミング */
+    animation-delay: 777ms;
+    /* １回分の長さ */
+    animation-duration: 2157ms;
+  }
+  .rand-5 {
+    animation-name:kira5;
+    /* 開始するタイミング */
+    animation-delay: 999ms;
+    /* １回分の長さ */
+    animation-duration: 2237ms;
+  }
+  .rand-6 {
+    animation-name:kira6;
+    /* 開始するタイミング */
+    animation-delay: 1211ms;
+    /* １回分の長さ */
+    animation-duration: 2439ms;
+  }
+  .modalOpen .kira,
+  .modalOpen .rand-1,
+  .modalOpen .rand-2
+  .modalOpen .rand-3
+  .modalOpen .rand-4
+  .modalOpen .rand-5
+  .modalOpen .rand-6{
+    animation: none;
+    display: none;
+  }
+
+
+  @keyframes kira {
+    0% {
+    transform:scale(1);
+    opacity:0;
+    }
+    30% {
+    transform:scale(4);
+    opacity:1.0;
+    }
+    50% {
+    transform:scale(8);
+    opacity:1.0;
+    }
+    80% {
+      transform:scale(0);
+      opacity:0;
+
+      }
+    100% {
+      transform:scale(0);
+      opacity:0;
+      }
+  }
+  @keyframes kira1 {
+    0% {
+    transform:scale(1) translate(0px, 0px);;
+    opacity:0;
+    }
+    20% {
+    transform:scale(4) translate(0px, 0.1px);
+    opacity:1.0;
+
+    }
+    40% {
+    transform:scale(8) translate(0px, 0.2px);
+    opacity:1.0;
+
+    }
+    60% {
+      transform:scale(8) translate(0px, 0.3px);
+      opacity:0;
+
+    }
+    100% {
+      transform:scale(0) translate(0px, 0.3px);
+      opacity:0;
+    }
+  }
+  @keyframes kira2 {
+    0% {
+    transform:scale(0.5) translate(0px, 0px);;
+    opacity:0;
+    }
+    30% {
+    transform:scale(2) translate(0.1px, 0px);;
+    opacity:1.0;
+    }
+    50% {
+    transform:scale(4) translate(0.2px, 0px);;
+    opacity:1.0;
+    }
+    80% {
+      transform:scale(0) translate(0.3px, 0px);;
+      opacity:0.2;
+      }
+    100% {
+      transform:scale(0) translate(0.3px, 0px);;
+      opacity:0;
+      }
+  }
+  @keyframes kira3 {
+    0% {
+    transform:scale(0.2) translate(0px, 0px);;
+    opacity:0;
+    }
+    50% {
+    transform:scale(3) translate(0px, -0.1px);;
+    opacity:1.0;
+    }
+    80% {
+    transform:scale(6) translate(0px, -0.2px);;
+    opacity:1.0;
+    }
+    90% {
+      transform:scale(0) translate(0px, -0.3px);;
+      opacity:0;
+      }
+    100% {
+      transform:scale(0) translate(0px, -0.3px);;
+      opacity:0;
+      }
+  }
+  @keyframes kira4 {
+    0% {
+    transform:scale(0.5) translate(0px, 0px);;
+    opacity:0;
+    }
+    50% {
+    transform:scale(5) translate(-0.1px, 0px);;
+    opacity:1.0;
+    }
+    80% {
+    transform:scale(10) translate(-0.2px, 0px);;
+    opacity:1.0;
+    }
+    90% {
+      transform:scale(0) translate(-0.3px, 0px);;
+      opacity:0;
+      }
+    100% {
+      transform:scale(0) translate(-0.3px, 0px);;
+      opacity:0;
+      }
+  }
+  @keyframes kira5 {
+    0% {
+    transform:scale(0.5) translate(0px, 0px);;
+    opacity:0;
+    }
+    50% {
+    transform:scale(3) translate(-0.1px, 0.1px);;
+    opacity:1.0;
+    }
+    80% {
+    transform:scale(5) translate(-0.2px, 0.2px);;
+    opacity:1.0;
+    }
+    90% {
+      transform:scale(0) translate(-0.3px, 0.3px);;
+      opacity:0;
+      }
+    100% {
+      transform:scale(0) translate(-0.3px, 0.3px);;
+      opacity:0;
+      }
+  }
+  @keyframes kira6 {
+    0% {
+    transform:scale(0.5) translate(0px, 0px);;
+    opacity:0.5;
+    }
+    50% {
+    transform:scale(4) translate(0.15px, -0.15px);;
+    opacity:1.0;
+    }
+    85% {
+    transform:scale(10) translate(0.25px, -0.2px);;
+    opacity:1.0;
+    }
+    90% {
+      transform:scale(0) translate(0.35px, -0.25px);;
+      opacity:0;
+      }
+    100% {
+      
+      transform:scale(0) translate(0.35px, -0.3px);;
+      opacity:0;
+      }
+  }
+
+  .left-light-wrap {
+    width: 100%;
+    left: 0px;
+    animation-name:  left-right;
+    transform: translate(0px, 0px);
+    clip-path: polygon( 
+      55% 6%,
+      100% 6%,
+
+      100% 8%,
+      55% 8%,
+
+      45% 93%,
+      4% 93%,
+
+      4% 91%,
+      45% 91%
+      );
+    /* background-color: #ff3232; */
+    background-image:  radial-gradient( 
+      rgba(255, 255, 255, 0)20%,
+      rgba(255, 255, 255, 0)25%,
+      rgba(255, 255, 255, 0.7)30%,
+      rgba(255, 234, 0, 0.8)40%,
+      rgba(251, 248, 176, 1)65%,
+      rgba(251, 248, 176, 1)70%,
+      rgb(221, 219, 178)80%,
+      rgb(243, 255, 205)85%,
+      rgba(255, 252, 169, 1)90%,
+      rgb(255, 221, 0)95%,
+      rgb(255, 247, 1)100%
+      );
+      background-size: 10%;
+      background-repeat: no-repeat;
+      background-position: center;
+    /* overflow: visible;
+    z-index: 1; */
+    animation-name: left-light;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    /* 開始するタイミング */
+    animation-delay: 300ms;
+    /* １回分の長さ */
+    animation-duration: 1200ms;
+    opacity:0;
+
+  }
+
+
+  @keyframes left-light {
+    0% {
+      background-size: 10%;
+      opacity:0;
+    }
+    20% {
+      background-size: 40%;
+      opacity:1;
+    }
+    50% {
+      background-size: 150%;
+      opacity:1;
+    }
+    80% {
+      background-size: 300%;
+      opacity:0.6;
+    }
+    90% {
+      background-size: 10000%;
+      opacity:0;
+    }
+    100% {
+      background-size: 100000%;
+      opacity:0;
+    }
+  }
+
+  .top-light-wrap {
+    width: 100%;
+    left: 0px;
+    transform-origin:center;
+    transform: translate(0px, 0px);
+    clip-path: inset(95% 0 0 0);
+    /* background-color: #ff3232; */
+    background-image:  radial-gradient( 
+      rgba(255, 255, 255, 0)20%,
+      rgba(255, 255, 255, 0)25%,
+      rgba(255, 255, 255, 1)30%,
+      rgba(255, 234, 0, 1)35%,
+      rgba(251, 248, 176, 1)65%,
+      rgba(251, 248, 176, 1)70%,
+      rgb(221, 219, 178)80%,
+      rgb(245, 245, 65)85%,
+      rgb(250, 255, 100)90%,
+      rgb(255, 221, 0)95%,
+      rgb(226, 255, 4)100%
+      );
+      background-size: 20%;
+      background-position: center;
+      background-repeat: no-repeat;
+    /* overflow: visible;
+    z-index: 1; */
+    animation-name: top-light;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    /* 開始するタイミング */
+    animation-delay: 900ms;
+    /* １回分の長さ */
+    animation-duration: 1200ms;
+    /* opacity:0; */
+
+  }
+  @keyframes top-light {
+    0% {
+      background-size: 10%;
+      opacity:0.3;
+    }
+    10% {
+      background-size: 40%;
+      opacity:1;
+    }
+    40% {
+      background-size: 80%;
+      opacity:1;
+    }
+    50% {
+      background-size: 100%;
+      opacity:1;
+    }
+    80% {
+      background-size: 10000%;
+      opacity:0.6;
+    }
+    100% {
+      background-size: 100000%;
+      opacity:0;
+    }
+  }
+
+
+
+
+
+
+
+

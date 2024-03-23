@@ -1,0 +1,645 @@
+/* *,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+} */
+
+/* html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+} */
+
+/* .btn,
+a.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+  background-color: transparent;
+} */
+
+.btn-emergency-real {
+  position: relative;
+  line-height: 2.5rem;
+  display: block;
+  /* width: 200px; */
+  height: 130px;
+  margin: 0 auto;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  touch-action: pan-y;
+  transform: scale(0.8, 1.4) translate(0%, -100%); 
+  opacity: 0.0;
+  /* アニメーションの再生中・再生後のスタイルを指定する */
+  animation-name: poyon;
+  /* forwards アニメーション再生後は、最後のキーフレーム（100%）のスタイルが適用されます */
+  /* backwards アニメーション再生後は、最初のキーフレーム（0%）のスタイルが適用されます */
+  animation-fill-mode: forwards;
+  /* 開始するタイミング */
+  /* 少し遅らせないとぽよんにならない */
+  animation-delay: 500ms;
+  /* １回分の長さ */
+  animation-duration: 700ms;
+  /* 標準の方向で再生されます */
+  animation-direction:normal;
+  /* 再生を無限に繰り返す */
+  animation-iteration-count:1;
+  animation-timing-function: linear;
+  /* opacity: 0.0; */
+}
+@keyframes poyon {
+  0%   {
+     transform: scale(0.8, 1.4) translate(0%, -100%); 
+     opacity: 0.0;
+  }
+  59%   {
+    transform: scale(0.8, 1.4) translate(0%, -100%); 
+    opacity: 0.0;
+ }
+  60%   { 
+    transform: scale(0.8, 1.4) translate(0%, -100%); 
+    opacity: 1.0;
+  }
+  65%  { transform: scale(0.8, 1.4) translate(0%, -15%); }
+  70%  { transform: scale(1.4, 0.6) translate(0%, 30%); }
+  75%  { transform: scale(0.9, 1.1) translate(0%, -10%); }
+  80%  { transform: scale(0.95, 1.2) translate(0%, -30%); }
+  85%  { transform: scale(0.95, 1.2) translate(0%, -10%); }
+  90%  { transform: scale(1.1, 0.9) translate(0%, 5%); }
+  95%  { transform: scale(1.0, 1.0) translate(0%, 0%); }
+  100% { 
+    transform: scale(1.0, 1.0) translate(0%, 0%);
+    opacity: 1.0;
+  }
+}
+
+/* 最初の１回勝手にペコっとなるので遅れて表示させる */
+/* @keyframes btn-emergency-real-delay-show {
+  0% {
+    opacity: 0.0;
+  }
+  90% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+} */
+
+.btn-emergency-real-push{
+  user-select: none;
+  pointer-events:none;
+  perspective: 80px;
+  perspective-origin: bottom;
+}
+.btn-emergency-real-push-text {
+  transform: rotateX(19deg);
+}
+/* .btn-emergency-real:hover .btn-emergency-real-top {
+  top: 10px;
+  height: 50px;
+  background-color: transparent;
+} */
+.btn-emergency-real:hover .btn-emergency-real-top {
+  /* top: 45px; */
+  /* bottom: 44px; */
+  /* height: 32px; */
+  /* height: 8px; */
+  /* transform: rotateX(14deg); */
+  /* border-radius: 0 0 120% 120%; */
+  /* border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 90%;
+  border-bottom-left-radius: 90%; */
+  /* bottom: 24px;
+  height: 24%;
+  /* border-radius: 0 0 50% 50% / 0 0 71% 71%; */
+  /* border-radius: 0 0 50% 50% / 0 0 calc(2500% / 24) calc(2500% / 24); */
+  /* filter: brightness(150%) saturate(250%); */ 
+  
+  background-color: transparent;
+}
+
+/* .btn-emergency-real:active .btn-emergency-real-top {
+  bottom: 24px;
+  height: 28%;
+  border-radius: 0 0 50% 50% / 0 0 calc(2100% / 26) calc(2100% / 26);
+  filter: brightness(150%) saturate(250%);
+  
+  background-color: transparent;
+} */
+
+
+
+.btn-emergency-real-top,
+.btn-emergency-real-top-Warning {
+  position: absolute;
+  /* top: 0; */
+  bottom: 24px;
+  /* left: 20px; */
+  width: 160px;
+  height: 56px;
+  margin-top: 30px;
+  /* -webkit-transition: all 0.3s;
+  transition: all 0.3s; */
+  /* -webkit-transition: all 0.2s;
+  transition: all 0.2s; */
+  border-radius: 0 0 50% 50%;
+  /* background-image: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(#630909),
+    to(#d62d2d)
+  ); */
+  background-image: -webkit-linear-gradient(right, #630909 0%, #d62d2d 100%);
+  background-image: linear-gradient(to left, #630909 0%, #d62d2d 100%);
+  -webkit-box-shadow: inset 0 -1px 10px 0 rgba(0, 0, 0, 0.9), 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 -1px 10px 0 rgba(0, 0, 0, 0.9), 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+
+  /* forwards アニメーション再生後は、最後のキーフレーム（100%）のスタイルが適用されます */
+  /* backwards アニメーション再生後は、最初のキーフレーム（0%）のスタイルが適用されます */
+  animation-fill-mode: forwards;
+  /* 開始するタイミング */
+  animation-delay: 0ms;
+  /* １回分の長さ */
+  animation-duration: 160ms;
+  /* 標準の方向で再生されます */
+  animation-direction:normal;
+  /* 再生を無限に繰り返す */
+  animation-iteration-count:1;
+  animation-timing-function: linear;
+  opacity: 1.0;
+}
+
+.isEvenMashing-true{
+  /* アニメーションの指定 */
+  animation-name: real-top-effect-1;
+}
+.isEvenMashing-false{
+  /* アニメーションの指定 */
+  animation-name: real-top-effect-2;
+}
+.isEvenMashing-true-Warning{
+  /* アニメーションの指定 */
+  animation-name: real-top-effect-3;
+}
+.isEvenMashing-false-Warning{
+  /* アニメーションの指定 */
+  animation-name: real-top-effect-4;
+}
+
+@keyframes real-top-effect-1 {
+  0% {
+    height: 56px;
+    border-radius: 0 0 50% 50%;
+    filter: none;
+  }
+  30%{
+    filter: brightness(140%) saturate(200%);
+  }
+  80% {
+    height: 28%;
+    border-radius: 0 0 50% 50% / 0 0 calc(2100% / 26) calc(2100% / 26);
+    filter: brightness(150%) saturate(250%);
+  }
+  100% {
+    height: 56px;
+    border-radius: 0 0 50% 50%;
+    filter: none;
+  }
+}
+@keyframes real-top-effect-2 {
+  0% {
+    height: 56px;
+    border-radius: 0 0 50% 50%;
+    filter: none;
+  }
+  30%{
+    filter: brightness(140%) saturate(200%);
+  }
+  80% {
+    height: 28%;
+    border-radius: 0 0 50% 50% / 0 0 calc(2100% / 26) calc(2100% / 26);
+    filter: brightness(150%) saturate(250%);
+  }
+  100% {
+    height: 56px;
+    border-radius: 0 0 50% 50%;
+    filter: none;
+  }
+}
+@keyframes real-top-effect-3 {
+  0% {
+    height: 70px;
+    border-radius: 0 0 50% 50%;
+    filter: none;
+  }
+  30%{
+    filter: brightness(140%) saturate(200%);
+  }
+  80% {
+    height: 16%;
+    border-radius: 0 0 50% 50% / 0 0 calc(2100% / 20) calc(2100% / 20);
+    filter: brightness(150%) saturate(250%);
+  }
+  100% {
+    height: 70px;
+    border-radius: 0 0 50% 50%;
+    filter: none;
+  }
+}
+@keyframes real-top-effect-4 {
+  0% {
+    height: 70px;
+    border-radius: 0 0 50% 50%;
+    filter: none;
+  }
+  30%{
+    filter: brightness(140%) saturate(200%);
+  }
+  80% {
+    height: 16%;
+    border-radius: 0 0 50% 50% / 0 0 calc(2100% / 20) calc(2100% / 20);
+    filter: brightness(150%) saturate(250%);
+  }
+  100% {
+    height: 70px;
+    border-radius: 0 0 50% 50%;
+    filter: none;
+  }
+}
+
+
+.btn-emergency-real-body {
+  position: absolute;
+  /* top: 0; */
+  bottom: 24px;
+  /* left: 20px; */
+  width: 160px;
+  height: 65px;
+  margin-top: 30px;
+  /* -webkit-transition: all 0.3s;
+  transition: all 0.3s; */
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 0 0 50% 50%;
+  /* background-image: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(#630909),
+    to(#d62d2d)
+  ); */
+  background-image: -webkit-linear-gradient(right, #630909 0%, #d62d2d 100%);
+  background-image: linear-gradient(to left, #630909 0%, #d62d2d 100%);
+  -webkit-box-shadow: inset 0 -1px 10px 0 rgba(0, 0, 0, 0.9),
+    0 5px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 -1px 10px 0 rgba(0, 0, 0, 0.9),
+    0 5px 5px 0 rgba(0, 0, 0, 0.2);
+    clip-path: polygon(0% 25%, 100% 25%, 100% 100%, 0% 100%);
+}
+
+.btn-emergency-real-top-Warning:after {
+  content: "";
+  left: 0;
+  top: 0;
+  position: absolute;
+  border-radius: 0 0 50% 50%;
+  height: 100%;
+  width: 100%;
+  /* background-image: linear-gradient(to left, #fafafa 0%, #fbff00 100%); */
+  background: linear-gradient(
+    90deg,
+    rgb(24, 4, 4)0%,
+    rgb(61, 10, 10)3%,
+    rgb(83, 13, 13)6%,
+    rgb(60, 10, 10)9%,
+
+    rgb(78, 15, 15)10%,
+    rgb(98, 4, 4)15%,
+    rgb(144, 8, 8)20%,
+
+    rgb(205, 18, 18)22%,
+    rgb(255, 22, 22)25%,
+    
+    rgb(247, 86, 54)30%,
+    rgb(248, 87, 66)35%,
+    rgb(255, 131, 59)40%,
+
+    rgb(255, 197, 50)45%,
+    rgb(248, 243, 116)48%,
+    rgb(255, 255, 254)50%,
+    rgb(248, 243, 116)52%,
+    rgb(255, 197, 50)55%,
+
+    rgb(255, 131, 59)60%,
+    rgb(248, 87, 66)65%,
+    rgb(247, 86, 54)70%,
+
+    rgb(255, 22, 22)75%,
+    rgb(205, 18, 18)78%,
+
+    rgb(144, 8, 8)80%,
+    rgb(98, 4, 4)85%,
+    rgb(78, 15, 15)90%,
+    
+    rgb(60, 10, 10)91%,
+    rgb(83, 13, 13)94%,
+    rgb(61, 10, 10)97%,
+    rgb(24, 4, 4)100%
+    );
+  box-shadow: inset 0 -1px 10px 0 rgba(255, 55, 5, 0.9), 0 5px 5px 0 rgb(72 10 10 / 76%);
+  background-size: 200% 100%;
+  z-index: -1;
+  /* アニメーションの指定 */
+  animation-name: warning-light;
+  animation-fill-mode: forwards;
+  /* 開始するタイミング */
+  animation-delay: 0ms;
+  /* １回分の長さ */
+  animation-duration: 500ms;
+  /* 標準の方向で再生されます */
+  animation-direction:normal;
+  /* 再生を無限に繰り返す */
+  animation-iteration-count:infinite;
+  animation-timing-function: linear;
+  opacity: 1.0;
+
+}
+@keyframes warning-light {
+	0% {
+		background-position-x: -200%;
+    background-position-y: 0%;
+	}
+	50% {
+		background-position-x: 0%;
+    background-position-y: 0%;
+	}
+	100% {
+		background-position-x: 200%;
+    background-position-y: 0%;
+	}
+}
+
+
+
+.btn-emergency-real-top:before,
+.btn-emergency-real-top-Warning:before {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 160px;
+  height: 60px;
+  content: "";
+  background-color: transparent;
+  border-radius: 80px / 30px;
+  /* background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#6c0c0b),
+    to(#ed4c4c)
+  ); */
+  background-image: -webkit-linear-gradient(bottom, #6c0c0b 0%, #ed4c4c 100%);
+  background-image: linear-gradient(to top, #6c0c0b 0%, #ed4c4c 100%);
+  -webkit-box-shadow: 0 10px 28px 2px rgba(0, 0, 0, 0.2),
+    inset 0 5px 10px 0 rgba(0, 0, 0, 0.2),
+    inset 0 2px 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -2px 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -2px 10px 5px rgba(237, 76, 76, 0.6),
+    inset 5px 0 1px 1px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 28px 2px rgba(0, 0, 0, 0.2),
+    inset 0 5px 10px 0 rgba(0, 0, 0, 0.2),
+    inset 0 2px 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -2px 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -2px 10px 5px rgba(237, 76, 76, 0.6),
+    inset 5px 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+
+
+.btn-emergency-real-bottom {
+  position: absolute;
+  top: 38px;
+  /* left: 0; */
+  background-color: transparent;
+  width: 200px;
+  height: 80px;
+
+  border-radius: 100px / 40px;
+  /* background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#f2f2f2),
+    color-stop(48%, #b4b4b4),
+    to(#767676)
+  ); */
+  background-image: -webkit-linear-gradient(
+    left,
+    #f2f2f2 0%,
+    #b4b4b4 48%,
+    #767676 100%
+  );
+  background-image: linear-gradient(
+    to right,
+    #f2f2f2 0%,
+    #b4b4b4 48%,
+    #767676 100%
+  );
+  -webkit-box-shadow: 0 8px 0 #c4cacc, inset 1px -1px 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 0 #c4cacc, inset 1px -1px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.btn-emergency-real-ripple {
+  position: absolute;
+  top: 38px;
+  background-color: transparent;
+  width: 200px;
+  height: 80px;
+  border-radius: 100px / 40px;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  /* 開始するタイミング */
+  animation-delay: 40ms;
+  /* １回分の長さ */
+  animation-duration: 300ms;
+  /* 標準の方向で再生されます */
+  animation-direction:normal;
+  /* 再生を無限に繰り返す */
+  animation-iteration-count:1;
+  animation-timing-function: linear;
+}
+.btn-emergency-real-ripple.clear {
+  background-image: linear-gradient(
+    to right,
+    #ffffff 0%,
+    #d0d0d0 48%,
+    #5f5e5e 100%
+  ); 
+  box-shadow: 0 8px 0 
+    rgb(241, 239, 239), 
+    inset 1px -1px 10px 0 rgba(114, 113, 113, 0.2);
+}
+.btn-emergency-real-ripple.Blue {
+  background-image: linear-gradient(
+    to right,
+    #00b3ff 0%,
+    #82edfb 48%,
+    #a3f1ed 100%
+  ); 
+  box-shadow: 0 8px 0 rgb(128, 181, 255), inset 1px -1px 10px 0 rgba(3, 56, 214, 0.2);
+}
+.btn-emergency-real-ripple.Yellow {
+  background-image: linear-gradient(
+    to right,
+    #ffdd00 0%,
+    #f7fa2b 48%,
+    #f9a806 100%
+  ); 
+  box-shadow: 0 8px 0 rgb(255, 221, 0), inset 1px -1px 10px 0 rgba(249, 113, 2, 0.2);
+}
+.btn-emergency-real-ripple.Red {
+  background-image: linear-gradient(
+    to right,
+    #ffaebb 0%,
+    #ee5959 48%,
+    #ff0000 55%,
+    #ff0000 70%,
+    #ff0000 100%
+  ); 
+  box-shadow: 0 8px 0 rgb(234, 5, 28), inset 1px -1px 10px 0 rgb(252, 166, 172);
+}
+.btn-emergency-real-ripple.Rainbow {
+  /* background-image: llinear-gradient(to right, Magenta, yellow, Cyan, Magenta) 0% center/200%; */
+  background: radial-gradient(ellipse,#e60000,#f39800,#fff100,#009944,#0068b7,#1d2088,#920783,#e60000,#f39800,#fff100,#009944,#0068b7,#1d2088,#920783,#e60000,#f39800,#fff100,#009944,#0068b7,#1d2088,#920783,#e60000,#f39800,#fff100,#009944,#0068b7,#1d2088,#920783,#e60000);
+  /* background-image: linear-gradient(
+    to right,
+    #ff0000 0%,
+    #ee5959 48%,
+    #491e1e 100%
+  );  */
+  box-shadow: 0 8px 0 rgb(1, 255, 128), inset 1px -1px 10px 0 rgb(255, 255, 255);
+}
+
+
+.ripple-even-true {
+  animation-name: ripple-effect-1;
+}
+.ripple-even-false {
+  animation-name: ripple-effect-2;
+}
+@keyframes ripple-effect-1 {
+  0% {
+    transform: scale(2.0);
+    opacity: 0.9;
+  }
+  60% {
+    transform: scale(4.0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(8.0);
+    opacity: 0.0;
+  }
+}
+@keyframes ripple-effect-2 {
+  0% {
+    transform: scale(2.0);
+    opacity: 0.9;
+  }
+  60% {
+    transform: scale(4.0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(8.0);
+    opacity: 0.0;
+  }
+}
+
+
+
+
+
+
+.btn-emergency-real-top span,
+.btn-emergency-real-top-Warning span {
+  font-size: 38px;
+  font-weight: bold;
+
+  position: absolute;
+  top: -24px;
+  left: 0;
+
+  width: 100%;
+
+  -webkit-transform: scaleY(0.75);
+
+  transform: scaleY(0.75);
+  text-align: center;
+
+  color: #e48a8a;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5),
+    1px 1px 5px rgba(255, 255, 255, 0.3);
+    background-color: transparent;
+}
+
+.btn-emergency-real-ButtonMashingText{
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  bottom: -180px;
+}
+
+.stroke-text{
+  font-size:64px;
+  text-align:center;
+  text-anchor:middle;
+  stroke:dodgerblue;
+  stroke-width:4px;
+  /* fill:none; */
+  fill:rgb(255, 22, 22);
+ }
+ .thick1{
+  stroke-width:16px;
+ }
+ .thick2{
+  stroke-width:8px;
+ }
+ .thicker{
+  stroke-width:24px;
+ }
+ .color1{
+  stroke:rgb(255 238 0);
+ }
+ .color2{
+  stroke:rgb(8, 8, 8);
+ }
+ .color3{
+  stroke:rgb(255, 255, 255);
+ }
+ .color4{
+  stroke:red;
+ }

@@ -1,0 +1,427 @@
+.itemWrap {
+  left: 0;
+  top: 0;
+  background: repeating-linear-gradient(
+    -90deg,
+    rgb(78, 73, 47),
+    rgb(90, 74, 45),
+    rgb(101, 100, 86), 
+    rgb(145, 140, 82), 
+    rgb(112, 93, 54), 
+    rgb(94, 86, 40), 
+    rgb(86, 84, 40), 
+    rgb(85, 85, 41), 
+    rgb(101, 85, 28), 
+    rgb(181, 172, 2),
+    rgb(79, 61, 9),
+    rgb(90, 69, 13) 2px
+    ),
+repeating-linear-gradient(
+    135deg,
+    hsla(0,0%,100%,0) 0%, 
+    hsla(0,0%,100%,0) 0.5px, 
+    hsla(0,0%,100%,.15) 1px
+    ),
+linear-gradient(
+    135deg, 
+    hsl(60, 78%, 79%)  0%,
+    hsl(42, 32%, 51%) 37%, 
+    hsl(51, 38%, 34%) 76%,
+    hsl(50, 66%, 21%) 100%);
+  background-blend-mode:
+  lighten /*03*/,
+  overlay /*02*/,
+  normal /*01*/;
+  background-size: 100%,100%;
+  backface-visibility: hidden;
+  transition: all 0.6s;
+  transform: rotateY(0deg);
+}
+.itemWrapBack {
+  left: 0;
+  top: 0;
+  /* background-color: blanchedalmond; */
+  background: repeating-linear-gradient(
+    -90deg,
+    rgb(74, 97, 101),
+    rgb(48, 70, 92),
+    rgb(104, 113, 115), 
+    rgb(74, 82, 94), 
+    rgb(97, 109, 121), 
+    rgb(58, 82, 91), 
+    rgb(121, 129, 132), 
+    rgb(78, 99, 100), 
+    rgb(86, 92, 101), 
+    rgb(100, 99, 95),
+    rgb(139, 139, 137),
+    rgb(99, 102, 103) 2px
+    ),
+repeating-linear-gradient(
+    135deg,
+    hsla(0,0%,100%,0) 0%, 
+    hsla(0,0%,100%,0) 0.5px, 
+    hsla(0,0%,100%,.15) 1px
+    ),
+linear-gradient(
+    135deg, 
+    hsl(60, 7%, 44%)  0%,
+    hsl(180, 11%, 71%) 37%, 
+    hsl(174, 8%, 50%) 76%,
+    hsl(219, 13%, 22%) 100%);
+  background-blend-mode:
+  lighten /*03*/,
+  overlay /*02*/,
+  normal /*01*/;
+  background-size: 100%,100%;
+  backface-visibility: hidden;
+  transition: all 0.6s;
+  transform: rotateY(-180deg);
+}
+
+.itemOuter.isSlected .itemWrap {
+
+  transform: rotateY(180deg);
+}
+
+/* ホバー時のカード表面 */
+.itemOuter.isSlected .itemWrapBack {
+
+  transform: rotateY(0deg);
+}
+
+.itemThumbnail{
+  color: transparent;
+  /* background: rgb(120 120 120); */
+  background: repeating-linear-gradient( -90deg, rgb(78, 73, 47), rgb(90, 74, 45), rgb(101, 100, 86), rgb(145, 140, 82), rgb(112, 93, 54), rgb(94, 86, 40), rgb(86, 84, 40), rgb(85, 85, 41), rgb(101, 85, 28), rgb(181, 172, 2), rgb(79, 61, 9), rgb(90, 69, 13) 2px ), repeating-linear-gradient( 135deg, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 0.5px, hsla(0,0%,100%,.15) 1px ), linear-gradient( 135deg, hsl(60, 78%, 79%) 0%, hsl(42, 32%, 51%) 37%, hsl(51, 38%, 34%) 76%, hsl(50, 66%, 21%) 100%);
+  background-blend-mode: lighten /*03*/, overlay /*02*/, normal /*01*/;
+  background-size: 100%,100%;
+  background-clip: content-box;
+  -webkit-background-clip: content-box;
+  /* text-shadow: 0.04em 0.04em 0.06em rgb(255 255 255 /55%); */
+  text-shadow: 0.02em 0.02em 0.01em rgb(255 255 255 /45%);
+}
+
+
+.itemThumbnail:active {
+  /* 回転時に背面を表示するかどうか */
+  backface-visibility: hidden;
+  
+  /* animation-name:itemThumbnail; */
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count:1;
+  /* animation-iteration-count:infinite; */
+  /* 開始するタイミング */
+  animation-delay: 0ms;
+  /* １回分の長さ */
+  animation-duration: 900ms;
+}
+
+@keyframes itemThumbnail {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+
+  }
+}
+
+.rarity {
+  /*文字を透明に*/
+  color: transparent; 
+  /*背景色*/
+  /* background: rgb(120 120 120);  */
+  background: repeating-linear-gradient(
+    -90deg,
+    rgb(78, 73, 47),
+    rgb(90, 74, 45),
+    rgb(101, 100, 86), 
+    rgb(145, 140, 82), 
+    rgb(112, 93, 54), 
+    rgb(94, 86, 40), 
+    rgb(86, 84, 40), 
+    rgb(85, 85, 41), 
+    rgb(101, 85, 28), 
+    rgb(181, 172, 2),
+    rgb(79, 61, 9),
+    rgb(90, 69, 13) 2px
+    ),
+
+repeating-linear-gradient(
+    135deg,
+    hsla(0,0%,100%,0) 0%, 
+    hsla(0,0%,100%,0) 0.5px, 
+    hsla(0,0%,100%,.15) 1px
+    ),
+linear-gradient(
+    135deg, 
+    hsl(60, 78%, 79%)  0%,
+    hsl(42, 32%, 51%) 37%, 
+    hsl(51, 38%, 34%) 76%,
+    hsl(50, 66%, 21%) 100%);
+  background-blend-mode:
+  lighten /*03*/,
+  overlay /*02*/,
+  normal /*01*/;
+  background-size: 100%,100%;
+
+
+  background-clip: text; /*背景を文字の形に切り抜く*/
+  -webkit-background-clip: text; /*ベンダーフレックス*/
+  /*半透明の白い影を付ける*/
+  /* text-shadow: 0.04em 0.04em 0.06em rgb(255 255 255 /55%);  */
+  text-shadow: 0.02em 0.02em 0.01em rgb(255 255 255 /45%); 
+}
+.rarity.text-black{
+  color: #000;
+}
+.point-exchange {
+  color: #ffffff;
+  text-shadow: 0 0.07em 0.01em rgba(100, 103, 30, 0.3);
+  /* text-shadow: 0 0.07em 0.01em rgba(0,0,0,0.25); */
+
+  color: transparent; /*文字を透明に*/
+  /*背景色*/
+  /* background: rgb(120 120 120);  */
+  background: repeating-linear-gradient(
+    /* -90deg, */
+    -285deg,
+    rgb(250, 245, 221),
+    rgb(248, 216, 113),
+    rgb(248, 238, 101), 
+    rgb(205, 183, 156), 
+    rgb(239, 233, 58), 
+    rgb(250, 226, 70), 
+    rgb(248, 241, 107), 
+    rgb(249, 229, 78), 
+    rgb(235, 228, 221), 
+    rgb(195, 191, 100),
+    rgb(242, 204, 150),
+    rgb(255, 255, 255) 1px
+    ),
+repeating-linear-gradient(
+    135deg,
+    hsla(64, 87%, 65%, 0) 0%, 
+    hsla(50, 80%, 54%, 0) 1px, 
+    hsla(58, 75%, 57%, 0.15) 2px
+    ),
+linear-gradient(
+    135deg, 
+    hsl(60, 78%, 79%)  0%,
+    hsl(53, 83%, 56%) 37%, 
+    hsl(44, 81%, 62%) 76%,
+    hsl(50, 70%, 81%) 100%);
+  background-blend-mode:
+  lighten /*03*/,
+  overlay /*02*/,
+  normal /*01*/;
+  background-size: 50%,50%;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.itemWrapBack .point-exchange {
+  color: #ffffff;
+  text-shadow: 0 0.07em 0.01em rgba(100, 103, 30, 0.3);
+  /* text-shadow: 0 0.07em 0.01em rgba(0,0,0,0.25); */
+
+  color: transparent; /*文字を透明に*/
+  /*背景色*/
+  /* background: rgb(120 120 120);  */
+  background: repeating-linear-gradient(
+    /* -90deg, */
+    -285deg,
+    rgb(165, 242, 245),
+    rgb(178, 180, 181),
+    rgb(218, 227, 228), 
+    rgb(156, 205, 203), 
+    rgb(165, 208, 219), 
+    rgb(230, 230, 230), 
+    rgb(196, 222, 248), 
+    rgb(199, 201, 202), 
+    rgb(237, 244, 249), 
+    rgb(207, 223, 240),
+    rgb(247, 252, 252),
+    rgb(252, 253, 253) 1px
+    ),
+repeating-linear-gradient(
+    135deg,
+    hsla(232, 87%, 65%, 0) 0%, 
+    hsla(240, 6%, 87%, 0) 1px, 
+    hsla(235, 8%, 72%, 0.15) 2px
+    ),
+linear-gradient(
+    135deg, 
+    hsl(181, 53%, 81%)  0%,
+    hwb(180 71% 4%) 37%, 
+    hsl(188, 24%, 82%) 76%,
+    hsl(177, 21%, 83%) 100%);
+  background-blend-mode:
+  lighten /*03*/,
+  overlay /*02*/,
+  normal /*01*/;
+  background-size: 50%,50%;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.itemAttribute-shadow {
+  color: #d1d1d1;
+  text-shadow: 0 0.07em 0.1em rgba(0,0,0,0.25);
+/*offset-x offset-y blur-radius color*/
+}
+
+.selected_ribbon span {
+	position: absolute;
+  top: 19px;
+  left: -19%;
+  transform: rotate(323deg);
+	/* top: -6px;
+	left: -6px; */
+  min-width: 70%;
+  height: 1.75rem;
+	/* padding: 4px 12px;
+	padding-right: 40px; */
+	letter-spacing: 0.1px;
+	color: #000000;
+	/* background: linear-gradient(-45deg,transparent,transparent 25%,#fbf9ff 0%,#a4a6ba); */
+  /* background-blend-mode:soft-light; */
+  /* mix-blend-mode: soft-light; */
+}
+.selected_ribbon::before {
+  position: absolute;
+  /* z-index: 10; */
+  top: 19px;
+  /* left: 0; */
+  left: -19%;
+  transform: rotate(323deg);
+  content: ' ';
+  min-width: 70%;
+  height: 1.75rem;
+  /* padding: 4px 12px; */
+  /* padding-right: 40px; */
+  letter-spacing: 0.1px;
+  mix-blend-mode: luminosity;
+  background-color: aliceblue;
+  /* background: linear-gradient(-60deg,transparent,transparent 25%,#85daed 0%,#b8d1ef); */
+}
+
+/* .selected_ribbon::before {
+	position: absolute;
+	z-index: 10;
+	top: 100%;
+	left: 0;
+	content: ' ';
+	border: 3px solid transparent;
+	border-top: 3px solid #5E35B1;
+	border-right: 3px solid #5E35B1;
+} */
+
+.label_list {
+  width:1000px;
+  margin:0 auto;
+  }
+  .label_list li{
+  width:32%;
+  float:left; 
+  margin-right:2%;
+  }
+  .label_list li:last-child{
+  margin-right:0;
+  }
+  .label_box {
+  position: relative;
+  padding: 50px;
+  background: #ffccbe;
+  }
+  .label_inner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 96px;
+  height: 96px;
+  overflow: hidden;
+  }
+  .bottom_label_inner {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 96px;
+    height: 96px;
+    overflow: hidden;
+    }
+  .ribbon {
+  display: inline-block;
+  position: absolute;
+  padding: 4px 0;
+  /* right: -21px; */
+  /* right: -17px; */
+  right: -24px;
+  /* top: 10px; */
+  /* top: 16px; */
+  top: 28px;
+  width: 160px;
+  text-align: center;
+  /* font-size: 16px; */
+  font-size: 10px;
+  font-weight: bold;
+  background: #FF1E21;
+  color: #ffffff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  outline: 0.5px dashed rgb(153, 152, 152);
+  outline-offset: -2px;
+
+  text-shadow: 0.3px 0.3px 0 rgb(37, 37, 37),0.3px -0.3px 0 rgb(37, 37, 37),-0.3px 0.3px 0 rgb(37, 37, 37),-0.3px -0.3px 0 rgb(37, 37, 37);
+  /* mix-blend-mode: multiply; */
+  mix-blend-mode: hard-light;
+  /* mix-blend-mode: normal; */
+  }
+  .bottom-ribbon {
+    display: inline-block;
+    position: absolute;
+    padding: 4px 0;
+    /* right: -21px; */
+    /* right: -17px; */
+    right: -24px;
+    /* left: -17px; */
+    /* top: 10px; */
+    /* top: 16px; */
+    /* bottom: 16px; */
+    bottom: 28px;
+    width: 160px;
+    text-align: center;
+    /* font-size: 16px; */
+    font-size: 10px;
+    font-weight: bold;
+    background: #ee2d30;
+    color: #fff;
+    outline: 0.5px dashed rgb(153, 152, 152);
+    outline-offset: -2px;
+    text-shadow: 0.3px 0.3px 0 rgb(37, 37, 37),0.3px -0.3px 0 rgb(37, 37, 37),-0.3px 0.3px 0 rgb(37, 37, 37),-0.3px -0.3px 0 rgb(37, 37, 37);
+    mix-blend-mode: hard-light;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    }
+  .ribbon.ribbon-green {
+    background: #17610c;
+    }
+  .ribbon:before, .ribbon:after {
+  /* position: absolute;
+  content: "";
+  border-top: 4px solid #A20002;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  bottom: -4px; */
+  }
+  .ribbon:before {
+  /* left: 20px; */
+  }
+  .ribbon:after {
+  /* right: 24px; */
+  }

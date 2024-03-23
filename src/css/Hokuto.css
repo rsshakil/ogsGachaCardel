@@ -1,0 +1,436 @@
+.typewriter-Wrap{
+    position: absolute;
+    z-index: 10;
+    /* height: 100%; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40%;
+}
+
+/***タイピングアニメーションを追加***/
+.typewriter1{
+    /* margin-top: 20%; */
+    vertical-align: top;
+    height: 0;
+    top:0px;
+    /*カーソル用の線*/
+    /* border-right: 0.08em solid black;  */
+    overflow: hidden; /*はみ出た要素を非表示に*/
+    white-space: nowrap; /*1行に*/
+}
+.HokutoTxt-first-false{
+    opacity:0;
+    animation: none;
+}
+.HokutoTxt-first-true{
+    /*animation: アニメーション名｜時間｜分割数｜ループ */
+    animation: typing1 2s steps(8, end) forwards, cursol_ 1s step-end infinite;
+}
+/*** 1文字ずつ出現するアニメーション ***/
+@keyframes typing1{
+    0% { height: 0%; }
+    100% { height: 8em; }
+}
+
+/***4Sー5S***/
+.typewriter2{
+    vertical-align: top;
+    top:0px;
+    margin-top: 30%;
+    height: 0;
+    /* height: 11em; */
+    /*カーソル用の線*/
+    /* border-right: 0.08em solid black;  */
+    overflow: hidden; /*はみ出た要素を非表示に*/
+    white-space: nowrap; /*1行に*/
+}
+.textBomb-true .typewriter2{
+    height: 11em;
+}
+/* 非表示の時上書き */
+.HokutoTxt-secondHit-false {
+    opacity:0;
+}
+.textBomb-true .HokutoTxt-secondHit-true {
+    opacity:1;
+}
+.textBomb-false .HokutoTxt-secondHit-true{
+    opacity:0;
+    /* 二行目開始するタイミング */
+    animation-delay: 2100ms;
+    /* １回分の長さ */
+    animation-duration: 600ms;
+    animation-name:typing2;
+    animation-fill-mode: forwards;
+    animation-timing-function: steps(15, end);
+}
+/*** 1文字ずつ出現するアニメーション ***/
+@keyframes typing2{
+    0% { height: 0%; opacity:1;}
+    100% { height: 15em; opacity:1;}
+}
+.typewriter1-wrap{
+    height: 15em;
+}
+.textBomb-false .typewriter2-wrap{
+    height: 30em;
+}
+/* 非表示の時上書き */
+.hurueruHokuto-false {
+    /* animation: none; */
+}
+.hurueruHokuto-true {
+    animation-delay: 0ms;
+    animation-duration : 300ms;
+    animation-name : hurueruHokuto;
+    animation-fill-mode : linear;
+    animation-iteration-count:infinite;
+}
+@keyframes hurueruHokuto {
+    0% {
+        filter: url("#squiggly-0");
+      }
+      25% {
+        filter: url("#squiggly-1");
+      }
+      50% {
+        filter: url("#squiggly-2");
+      }
+      75% {
+        filter: url("#squiggly-3");
+      }
+      100% {
+        filter: url("#squiggly-4");
+      }
+}
+/* @keyframes hurueruHokuto {
+    0% {
+        transform: translate(0px, 0px) rotateZ(0deg);
+        opacity:0.7;
+    }
+    33% {
+        transform: translate(2px, 2px) rotateZ(2deg);
+        opacity:1;
+    }
+    66% {
+        transform: translate(0px, 2px) rotateZ(0deg);
+        opacity:0.6;
+    }
+    100% {
+        transform: translate(2px, 0px) rotateZ(-2deg);
+        opacity:1;
+    }
+} */
+/*** カーソルが点滅するアニメーション ***/
+@keyframes cursol{
+    0%{ border-color: transparent; }/*消滅*/
+    50%{ border-color: black; } /*出現*/
+    100%{ border-color: transparent; }/*消滅*/
+}
+  
+/***サンプル用装飾***/
+.HokutoTxt-first, .HokutoTxt-secondSilent, .HokutoTxt-secondHit{
+    font-size:3rem;
+    /* margin: 2rem; */
+    font-weight: 900;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+.bomb {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    /* padding-top: 20%;
+    padding-bottom: 20%; */
+}
+.bomb-img{
+    position: absolute;
+    /* width: 100%;
+    max-width: 420px; */
+    z-index: 2;
+}
+.showBomb-false{
+    /* height: 150%; */
+    width: 500%;
+    max-width: 400px;
+    bottom: -160px;
+}
+/* 爆発 */
+.showBomb-true{
+    transform:scale(1);
+    max-height: 90%;
+    animation-delay: 300ms;
+    animation-duration : 4000ms;
+    animation-name : showBomb-true;
+    animation-fill-mode : forwards;
+    animation-iteration-count:1;
+}
+/* 爆発拡大　ちょっと遅らせる */
+@keyframes showBomb-true {
+    0% {
+        transform:scale(1);
+    }
+    100% {
+        transform:scale(5) rotate(90deg);
+        
+    }
+ }
+
+.textBomb-true{
+    background: linear-gradient(
+        15deg, 
+        #f00 0%, 
+        #f80 5%, 
+        #dd0 10%, 
+        #0d0 15%, 
+        #0dd 20%, 
+        #00f 25%, 
+        #e0e 30%, 
+        #f00 35%, 
+        #f80 40%, 
+        #dd0 45%, 
+        #0d0 50%, 
+        #0dd 55%, 
+        #00f 60%, 
+        #e0e 65%, 
+        #f80 70%, 
+        #dd0 75%, 
+        #0d0 80%, 
+        #0dd 85%, 
+        #00f 90%, 
+        #e0e 95%, 
+        #f00 100%
+        ) 0% center / auto 30%;
+    /* background-size:200%; */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity:0.0;
+
+    animation-delay: 300ms;
+    animation-duration : 5000ms;
+    animation-name : textAnime;
+    animation-fill-mode : fease-out;
+    animation-iteration-count:1;
+  }
+  /* レインボーで文字拡大 */
+  @keyframes textAnime{
+    0% {
+        opacity:0.0;
+        transform:scale(0.2) translateY(10%);
+    }
+    5% {
+        background-position-y: 120%;
+        opacity:0;
+        
+    }
+    6% {
+        background-position-y: 120%;
+        transform:scale(0.2);
+        opacity:1;
+        
+    }
+    18% {
+        opacity:1;
+    }
+    28% {
+        opacity:1;
+    }
+    100% {
+        opacity:1;
+        background-position-y: -120%;
+        transform:scale(4) translateY(22%);
+        
+    }
+  }
+.stamp-wrap{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.stamp { 
+    font-size:10px; 
+    border:3px double #f00; 
+    border-radius:50%; 
+    color:#f00; 
+    width:64px; 
+    height:64px; 
+    position:absolute; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin:auto;
+    z-index:4;
+    font-weight: 900;
+    transform:scale(3);
+    opacity:0;
+    /* background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    /* animation: stampAnime_ 1s ease-in 1; */
+}
+@keyframes stampAnime{
+    0% {
+        opacity:0.3;
+        transform:scale(20);
+    }
+    90% {
+        opacity:1.0;
+        transform:scale(2.4);
+    }
+    95% {
+        opacity:1.0;
+        transform:scale(3.6);
+    }
+    97% {
+        opacity:1.0;
+        transform:scale(2.6);
+    }
+    98% {
+        opacity:1.0;
+        transform:scale(3.4);
+        
+    }
+    100% {
+        opacity:1.0;
+        transform:scale(3);
+    }
+  }
+.stamp-1{
+    /* animation: stamp-1 1s ease-in 1; */
+    /* animation: stamp-1 1s ease-in 1; */
+    /* transform-origin: center bottom; */
+    transform-origin: center;
+    animation-fill-mode: forwards;
+      /* 開始するタイミング */
+    animation-delay: 400ms;
+    /* １回分の長さ */
+    animation-duration: 400ms;
+    animation-timing-function:ease-out;
+    animation-iteration-count:1;
+    animation-name: stamp;
+}
+
+    .stamp-2{
+        /* animation: stamp-1 1s ease-in 1; */
+        /* animation: stamp-1 1s ease-in 1; */
+        /* transform-origin: center bottom; */
+        transform-origin: center;
+        animation-fill-mode: forwards;
+          /* 開始するタイミング */
+        animation-delay: 900ms;
+        /* １回分の長さ */
+        animation-duration: 400ms;
+        animation-timing-function:ease-out;
+        animation-iteration-count:1;
+        animation-name: stamp;
+    }
+    .stamp-3{
+        /* animation: stamp-1 1s ease-in 1; */
+        /* animation: stamp-1 1s ease-in 1; */
+        /* transform-origin: center bottom; */
+        transform-origin: center;
+        animation-fill-mode: forwards;
+            /* 開始するタイミング */
+        animation-delay: 1400ms;
+        /* １回分の長さ */
+        animation-duration: 400ms;
+        animation-timing-function:ease-out;
+        animation-iteration-count:1;
+        animation-name: stamp;
+    }
+    @keyframes stamp{
+        0% {
+            /* width: 100%; */
+            transform: scale(35) rotate(-480deg) translate(0%,0%);
+            /* transform:rotate(0deg) */
+            opacity: 0.8;
+        }
+        84% {
+            /* transform: scale(1.7);
+            transform:rotate(180deg) */
+            transform: scale(4.0) rotate(0deg) translate(0%,0%);
+            opacity: 1;
+        }
+        86% {
+            opacity:1.0;
+            transform:scale(3.0);
+        }
+        88% {
+            opacity:1.0;
+            transform:scale(4.0);
+        }
+        90% {
+            opacity:1.0;
+            transform:scale(4.5);
+        }
+        92% {
+            opacity:1.0;
+            transform:scale(4.0);
+        }
+        94% {
+            opacity:1.0;
+            transform:scale(3.0);
+        }
+        96% {
+            opacity:1.0;
+            transform:scale(4.0);
+        }
+        98% {
+            opacity:1.0;
+            transform:scale(4.5);
+        }
+        100% {
+            opacity:1.0;
+            transform:scale(4);
+        }
+    }
+
+.stamp span { 
+    display:inline-block; 
+    width:100%; 
+    text-align:center;
+    font-family: "Noto Serif JP",sans-serif;
+}
+.stamp span:first-child::before { 
+    position:absolute; 
+    top:5px; 
+    left:0; 
+    right:0; 
+    margin:auto; 
+    width:80%; 
+    border-bottom:1px solid #f00; 
+    line-height:1; 
+    padding-bottom:3px; 
+}
+.stamp span:first-child { 
+    line-height:56px; 
+}
+.stamp span:last-child { 
+    position:absolute; 
+    top:38px; 
+    left:0; 
+    right:0; 
+    margin:auto; 
+    width:80%; 
+    border-top:1px solid #f00; 
+    padding-top:2px; 
+    line-height:1; 
+}
+
+.stamp-approve span:first-child::before {
+  content:"確定";
+}
+.stamp-false{
+    display: none;
+}
+.stamp-true{
+    display: block;
+}

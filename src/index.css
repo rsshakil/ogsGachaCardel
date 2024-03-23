@@ -1,0 +1,89 @@
+
+
+.required::after {
+  content: attr(data-text)"";
+  /* content: "必須"; */
+  /* background-color: #ec2323; */
+  background-color: #ff4b00;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: bold;
+  min-width: 10px;
+  padding: 2px 4px;
+  margin: 0px 5px;
+  line-height: 0.75rem;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-align: center;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.spinner_none {
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+.no-spin::-webkit-inner-spin-button,
+.no-spin::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  -moz-appearance: textfield;
+}
+
+.required-class > div > label > span {
+  display: none;
+}
+
+.menu2 > div > table {
+  width: 100% !important;
+}
+
+.menu2 > div > table > tbody tr td:nth-of-type(2) {
+  width: 16px !important;
+}
+
+div[aria-label="HeaderMenu1Modal"] > div,
+div[aria-label="HeaderMenu2Modal"] > div {
+  max-width: 640px;
+}
+
+.map-container {
+  width: "-webkit-fill-available";
+  height: "100%";
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+.contain {
+  /* background-size: contain; */
+  object-fit: contain;
+}
+
+.number {
+  text-align: center;
+}
+.currency {
+  position: relative;
+  text-align: right;
+}
+
+.right-shadow {
+  box-shadow: 1px 0 1px 0px #95a4b8;
+}
+/* Form elements black color set */
+button, input, optgroup, select, textarea {
+  color: #000;
+}
+/* Error message min-height set */
+.text-error-message {
+  min-height: 16px;
+}
+

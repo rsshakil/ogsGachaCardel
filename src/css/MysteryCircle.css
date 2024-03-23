@@ -1,0 +1,979 @@
+:root {
+  /* --size: 110vh; */
+  --MysteryCircleSize: 110vh;
+  --s: calc(var(--MysteryCircleSize) / 6);
+  --bor: calc(var(--MysteryCircleSize) / 30);
+  --boxShadow: calc(var(--MysteryCircleSize) / 12);
+}
+
+/* body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #000;
+  overflow:hidden;
+} */
+
+.circle {
+  position: absolute;
+  left:0;
+  right: 0;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  /* left: 50%; */
+  /* top: 15%; */
+  /* margin: 0 auto; */
+  /* bottom: 0; */
+  /* margin-top: 0;
+  margin-bottom: 0; */
+  /* transform: translate(-50%, -50%); */
+  width: 100%;
+  max-width: 640px;
+  aspect-ratio: 1 / 1;
+  /* width: var(--size); */
+  /* height: var(--size); */
+  filter: url(#wavy) blur(1px);
+}
+
+
+.circle:before,
+.circle:after {
+  content: "";
+  position: absolute;
+  aspect-ratio: 1 / 1;
+  /* top: var(--s); */
+  top: 0px;
+  /* left: var(--s); */
+  left: 0px;
+  /* right: var(--s); */
+  right: 0px;
+  /* bottom: var(--s); */
+  bottom: 0px;
+  border-radius: 50%;
+  border: var(--bor) solid #fff;
+}
+.circle:before {
+  box-shadow: 0 0 var(--boxShadow) #0f0, inset 0 0 var(--boxShadow) #0f0;
+  /* -webkit-box-reflect: below 10px
+    linear-gradient(transparent, transparent, #0002); */
+  animation: move 5s linear infinite;
+}
+
+.circle:after {
+  box-shadow: 0 0 calc(var(--bor)/2) #fff, inset 0 0 var(--bor) #fff;
+}
+
+@keyframes move {
+  0% {
+    box-shadow: 0 0 var(--boxShadow) #0f0, inset 0 0 var(--boxShadow) #0f0;
+    filter: hue-rotate(0deg);
+  }
+  20% {
+    box-shadow: 0 0 60px #0f0, inset 0 0 60px #0f0;
+  }
+
+  40% {
+    box-shadow: 0 0 40px #0f0, inset 0 0 40px #0f0;
+  }
+  60% {
+    box-shadow: 0 0 80px #0f0, inset 0 0 80px #0f0;
+  }
+  80% {
+    box-shadow: 0 0 100px #0f0, inset 0 0 100px #0f0;
+  }
+  100% {
+    box-shadow: 0 0 var(--boxShadow) #0f0, inset 0 0 var(--boxShadow) #0f0;
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* .circle-svg {
+  width: 0;
+  height: 0;
+} */
+
+
+/* アニメーション群 */
+.circle-effect-0 {
+  animation-name: circle-effect-0;
+  animation-fill-mode: forwards;
+  /* 開始するタイミング */
+  animation-delay: 600ms;
+  /* １回分の長さ */
+  animation-duration: 6000ms;
+
+  transform: scale(0.7);
+  opacity: 0;
+  transform-origin: center;
+  animation-timing-function: linear;
+  /*ease-outは最初早くてで後半に加速*/
+  /* animation-timing-function:ease-out;  */
+  /*順方向→逆方向の順で再生する*/
+  /* animation-direction:alternate; */
+  /* 偶数回は順方向、奇数回は逆方向からの再生を繰り返します */
+  animation-direction:alternate-reverse;
+  /* 再生を無限に繰り返す */
+  animation-iteration-count:infinite;
+}
+
+@keyframes circle-effect-0 {
+  0% {
+    /* width: 100%; */
+    transform: scale(0.6) rotate(-720deg) translate(0%,-130%);
+    /* transform:rotate(0deg) */
+    opacity: 0.0;
+  }
+  47%{
+    /* width: 80%; */
+    transform: scale(0.2) rotate(360deg) translate(0%,0%);
+    /* transform:rotate(360deg) */
+    opacity: 1;
+  }
+  50%{
+    /* width: 80%; */
+    transform: scale(0.03) rotate(720deg) translate(0%,0%);
+    /* transform:rotate(360deg) */
+    opacity: 1;
+  }
+  53%{
+    /* width: 80%; */
+    transform: scale(0.2) rotate(1080deg) translate(0%,0%);
+    /* transform:rotate(360deg) */
+    opacity: 1;
+  }
+  100% {
+    /* width: 100%; */
+    transform: scale(0.6) rotate(2160deg) translate(0%,130%);
+    /* transform:rotate(0deg) */
+    opacity: 0.0;
+  }
+}
+
+.circle-effect-1 {
+  animation-name: circle-effect-1;
+  animation-fill-mode: forwards;
+  /* 開始するタイミング */
+  animation-delay: 600ms;
+  /* １回分の長さ */
+  animation-duration: 4800ms;
+
+  transform: scale(0.7);
+  opacity: 0;
+  /* transform-origin: center; */
+  animation-timing-function: linear;
+  /*ease-outは最初早くてで後半に加速*/
+  /* animation-timing-function:ease-out;  */
+  /*順方向→逆方向の順で再生する*/
+  /* animation-direction:alternate; */
+  /* 再生を無限に繰り返す */
+  animation-iteration-count:infinite;
+}
+
+@keyframes circle-effect-1 {
+  0% {
+    /* width: 100%; */
+    transform: scale(0.7) rotate(0deg);
+    /* transform:rotate(0deg) */
+    opacity: 1;
+  }
+  50% {
+    /* transform: scale(1.7);
+    transform:rotate(180deg) */
+    transform: scale(0.75) rotate(180deg);
+    opacity: 0.9;
+  }
+  100%{
+    /* width: 80%; */
+    transform: scale(0.7) rotate(360deg);
+    /* transform:rotate(360deg) */
+    opacity: 1;
+  }
+}
+
+.circle-effect-2 {
+  animation-name: circle-effect-2;
+  animation-fill-mode: forwards;
+  /* 開始するタイミング */
+  animation-delay: 600ms;
+  /* １回分の長さ */
+  animation-duration: 2400ms;
+
+  transform: scale(0.3);
+  opacity: 0;
+  /* transform-origin: center; */
+  /* animation-timing-function: linear; */
+  /*ease-outは最初早くてで後半に加速*/
+  animation-timing-function:ease-out; 
+  /*順方向→逆方向の順で再生する*/
+  /* animation-direction:alternate; */
+  /* 再生を無限に繰り返す */
+  animation-iteration-count:infinite;
+}
+
+@keyframes circle-effect-2 {
+  0% {
+    /* width: 100%; */
+    transform: scale(0.2) rotate(0deg);
+    /* transform:rotate(0deg) */
+    opacity: 1;
+  }
+  20% {
+    /* transform: scale(1.7);
+    transform:rotate(180deg) */
+    transform: scale(2.0) rotate(180deg);
+    opacity: 0;
+  }
+  24% {
+    /* width: 100%; */
+    transform: scale(0.2) rotate(0deg);
+    /* transform:rotate(0deg) */
+    opacity: 0;
+  }
+  25% {
+    /* width: 100%; */
+    transform: scale(0.2) rotate(0deg);
+    /* transform:rotate(0deg) */
+    opacity: 1;
+  }
+  45% {
+    /* transform: scale(1.7);
+    transform:rotate(180deg) */
+    transform: scale(2.0) rotate(180deg);
+    opacity: 0;
+  }
+  100% {
+    /* transform: scale(1.7);
+    transform:rotate(180deg) */
+    transform: scale(3.0) rotate(180deg);
+    opacity: 0;
+  }
+}
+.circle-effect-3 {
+  animation-name: circle-effect-3;
+  animation-fill-mode: forwards;
+  /* 開始するタイミング */
+  animation-delay: 600ms;
+  /* １回分の長さ */
+  animation-duration: 3600ms;
+
+  transform: scale(0.7);
+  opacity: 0;
+  transform-origin: center;
+  animation-timing-function: linear;
+  /*ease-outは最初早くてで後半に加速*/
+  /* animation-timing-function:ease-out;  */
+  /*順方向→逆方向の順で再生する*/
+  /* animation-direction:alternate; */
+
+  /* 標準の方向で再生されます */
+  animation-direction:normal;
+  /* 偶数回は順方向、奇数回は逆方向からの再生を繰り返します */
+  /* animation-direction:alternate-reverse; */
+  /* 再生を無限に繰り返す */
+  animation-iteration-count:infinite;
+}
+
+@keyframes circle-effect-3 {
+    /* #1 */
+    0% {
+        /* width: 100%; */
+        transform: scale(0.2) rotate(-0deg) translate(-0%,0%);
+        /* transform:rotate(0deg) */
+        opacity: 1;
+    }
+    /* #1.25 */
+    1.5625% {
+        /* width: 100%; */
+        transform: scale(0.25) rotate(-0deg) translate(-0%,0%);
+        /* transform:rotate(0deg) */
+        opacity: 0;
+    }
+    /* #1.5 */
+    3.125% {
+        /* width: 100%; */
+        transform: scale(0.25) rotate(-0deg) translate(-0%,0%);
+        /* transform:rotate(0deg) */
+        opacity: 0;
+    }
+    6.249% {
+        /* width: 100%; */
+        transform: scale(0.2) rotate(-0deg) translate(-0%,-0%);
+        /* transform:rotate(0deg) */
+        opacity: 0;
+    }
+    /* #2 */
+    6.25% {
+        /* width: 100%; */
+        transform: scale(0.2) rotate(-0deg) translate(-0%,-0%);
+        /* transform:rotate(0deg) */
+        opacity: 1;
+    }
+    /* #2.25 */
+    7.8125% {
+        /* width: 100%; */
+        transform: scale(0.25) rotate(-0deg) translate(-0%,-0%);
+        /* transform:rotate(0deg) */
+        opacity: 0;
+    }
+    /* #2.5 */
+    9.375% {
+        /* width: 100%; */
+        transform: scale(0.25) rotate(-0deg) translate(-0%,-0%);
+        /* transform:rotate(0deg) */
+        opacity: 0;
+    }
+
+    12.49%{
+        /* width: 80%; */
+        transform: scale(0.2) rotate(0deg) translate(-0%,0%);
+        /* transform:rotate(360deg) */
+        opacity: 0;
+    }
+    /* #3 */
+    12.5%{
+        /* width: 80%; */
+        transform: scale(0.2) rotate(0deg) translate(-0%,0%);
+        /* transform:rotate(360deg) */
+        opacity: 1;
+    }
+    15.624%{
+        /* width: 80%; */
+        transform: scale(0.2) rotate(0deg) translate(-0%,0%);
+        /* transform:rotate(360deg) */
+        opacity: 1;
+    }
+    /* #3.5 */
+    15.625%{
+        /* width: 80%; */
+        transform: scale(0.2) rotate(0deg) translate(-0%,0%);
+        /* transform:rotate(360deg) */
+        opacity: 0;
+    }
+    18.749%{
+        /* width: 80%; */
+        transform: scale(0.2) rotate(0deg) translate(0,0%);
+        /* transform:rotate(360deg) */
+        opacity: 0;
+    }
+    /* #4 */
+    18.75%{
+        /* width: 80%; */
+        transform: scale(0.2) rotate(0deg) translate(0,0%);
+        /* transform:rotate(360deg) */
+        opacity: 0;
+    }
+    24.99%{
+        /* width: 80%; */
+        transform: scale(0.3) rotate(0deg) translate(0,0%);
+        /* transform:rotate(360deg) */
+        opacity: 0;
+    }
+    /* #5 */
+    25%{
+        /* width: 80%; */
+        transform: scale(0.3) rotate(0deg) translate(0,0%);
+        /* transform:rotate(360deg) */
+        opacity: 1;
+    }
+    /* #5.25 */
+    26.5625%{
+        /* width: 80%; */
+        transform: scale(0.3) rotate(0deg) translate(0,0%);
+        /* transform:rotate(360deg) */
+        opacity: 0;
+    }
+    /* #5.5 */
+    28.125%{
+        /* width: 80%; */
+        transform: scale(0.3) rotate(0deg) translate(0,0%);
+        /* transform:rotate(360deg) */
+        opacity: 0;
+    }
+    31.249% {
+        /* width: 100%; */
+        transform: scale(0.3) rotate(-0deg) translate(0,0%);
+        /* transform:rotate(0deg) */
+        opacity: 0;
+    }
+    /* #6 */
+    31.25% {
+        /* width: 100%; */
+        transform: scale(0.3) rotate(-0deg) translate(0,0%);
+        /* transform:rotate(0deg) */
+        opacity: 1;
+    }
+    /* #6.25 */
+    32.8125% {
+        /* width: 100%; */
+        transform: scale(0.3) rotate(-0deg) translate(0,0%);
+        /* transform:rotate(0deg) */
+        opacity: 0;
+    }
+    /* #6.5 */
+    34.375% {
+        /* width: 100%; */
+        transform: scale(0.3) rotate(-0deg) translate(0,0%);
+        /* transform:rotate(0deg) */
+        opacity: 0;
+    }
+    37.49%{
+        /* width: 80%; */
+        transform: scale(0.3) rotate(0deg) translate(0,0%);
+        /* transform:rotate(360deg) */
+        opacity: 0;
+    }
+    /* #7 */
+    37.5%{
+        /* width: 80%; */
+        transform: scale(0.3) rotate(0deg) translate(0,0%);
+        /* transform:rotate(360deg) */
+        opacity: 1;
+    }
+    40.624%{
+        /* width: 80%; */
+        transform: scale(0.3) rotate(0deg) translate(0,0%);
+        /* transform:rotate(360deg) */
+        opacity: 1;
+    }
+    /* #7.5 */
+    40.625%{
+        /* width: 80%; */
+        transform: scale(0.3) rotate(0deg) translate(0,0%);
+        /* transform:rotate(360deg) */
+        opacity: 0;
+    }
+    43.749%{
+        /* width: 80%; */
+        transform: scale(0.3) rotate(0deg) translate(0%,-0%);
+        /* transform:rotate(360deg) */
+        opacity: 0;
+    }
+    /* #8 */
+    43.75%{
+        /* width: 80%; */
+        transform: scale(0.3) rotate(0deg) translate(0%,-0%);
+        /* transform:rotate(360deg) */
+        opacity: 0;
+    }
+    49.99%{
+        /* width: 80%; */
+        transform: scale(0.4) rotate(0deg) translate(0%,-0%);
+        /* transform:rotate(360deg) */
+        opacity: 0;
+    }
+    /* #9 */
+    50%{
+        /* width: 80%; */
+        transform: scale(0.4) rotate(0deg) translate(0%,-0%);
+        /* transform:rotate(360deg) */
+        opacity: 1;
+    }
+    /* #9.25 */
+    51.5625%{
+        /* width: 80%; */
+        transform: scale(0.4) rotate(0deg) translate(0%,-0%);
+        /* transform:rotate(360deg) */
+        opacity: 0;
+    }
+    /* #9.5 */
+    53.125%{
+        /* width: 80%; */
+        transform: scale(0.4) rotate(0deg) translate(0%,-0%);
+        /* transform:rotate(360deg) */
+        opacity: 0;
+    }
+    56.249% {
+        /* width: 100%; */
+        transform: scale(0.4) rotate(-0deg) translate(0%,-0%);
+        /* transform:rotate(0deg) */
+        opacity: 0;
+    }
+    /* #10 */
+    56.25% {
+        /* width: 100%; */
+        transform: scale(0.4) rotate(-0deg) translate(0%,-0%);
+        /* transform:rotate(0deg) */
+        opacity: 1;
+    }
+    /* #10.25 */
+    57.8125% {
+        /* width: 100%; */
+        transform: scale(0.4) rotate(-0deg) translate(0%,-0%);
+        /* transform:rotate(0deg) */
+        opacity: 0;
+    }
+    /* #10.5 */
+    59.375% {
+        /* width: 100%; */
+        transform: scale(0.4) rotate(-0deg) translate(0%,-0%);
+        /* transform:rotate(0deg) */
+        opacity: 0;
+    }
+    62.49%{
+        /* width: 80%; */
+        transform: scale(0.4) rotate(0deg) translate(0%,-0%);
+        /* transform:rotate(360deg) */
+        opacity: 0;
+    }
+    /* #11 */
+    62.5%{
+        /* width: 80%; */
+        transform: scale(0.4) rotate(0deg) translate(0%,-0%);
+        /* transform:rotate(360deg) */
+        opacity: 1;
+    }
+    65.624%{
+        /* width: 80%; */
+        transform: scale(0.4) rotate(0deg) translate(0%,-0%);
+        /* transform:rotate(360deg) */
+        opacity: 1;
+    }
+    /* #11.5 */
+    65.625%{
+        /* width: 80%; */
+        transform: scale(0.4) rotate(0deg) translate(0%,-0%);
+        /* transform:rotate(360deg) */
+        opacity: 0;
+    }
+    68.749%{
+        /* width: 80%; */
+        transform: scale(0.4) rotate(0deg) translate(0%,0%);
+        /* transform:rotate(360deg) */
+        opacity: 0;
+    }
+    /* #12 */
+    68.75%{
+        /* width: 80%; */
+        transform: scale(0.4) rotate(0deg) translate(0%,0%);
+        /* transform:rotate(360deg) */
+        opacity: 0;
+    }
+    74.99%{
+        /* width: 80%; */
+        transform: scale(0.5) rotate(0deg) translate(0%,0%);
+        /* transform:rotate(360deg) */
+        opacity: 0;
+    }
+    /* #13 */
+    75%{
+        /* width: 80%; */
+        transform: scale(0.5) rotate(0deg) translate(0%,0%);
+        /* transform:rotate(360deg) */
+        opacity: 1;
+    }
+    /* #13.5 */
+    78.125%{
+        /* width: 80%; */
+        transform: scale(0.5) rotate(0deg) translate(0%,0%);
+        /* transform:rotate(360deg) */
+        opacity: 1;
+    }
+    81.249% {
+        /* width: 100%; */
+        transform: scale(0.5) rotate(-0deg) translate(0%,-0%);
+        /* transform:rotate(0deg) */
+        opacity: 1;
+    }
+    /* #14 */
+    81.25% {
+        /* width: 100%; */
+        transform: scale(0.5) rotate(-0deg) translate(0%,-0%);
+        /* transform:rotate(0deg) */
+        opacity: 0;
+    }
+    87.49%{
+        /* width: 80%; */
+        transform: scale(0.7) rotate(0deg) translate(0%,0%);
+        /* transform:rotate(360deg) */
+        opacity: 0;
+    }
+    /* #15 */
+    87.5%{
+        /* width: 80%; */
+        transform: scale(0.7) rotate(0deg) translate(0%,0%);
+        /* transform:rotate(360deg) */
+        opacity: 1;
+    }
+    /* #15.5 */
+    90.625%{
+        /* width: 80%; */
+        transform: scale(0.7) rotate(0deg) translate(0%,0%);
+        /* transform:rotate(360deg) */
+        opacity: 1;
+    }
+    /* #16 */
+    93.75%{
+        /* width: 80%; */
+        transform: scale(0.8) rotate(0deg) translate(0%,0%);
+        /* transform:rotate(360deg) */
+        opacity: 0;
+    }
+    93.76%{
+        /* width: 80%; */
+        transform: scale(0.8) rotate(0deg) translate(0%,0%);
+        /* transform:rotate(360deg) */
+        opacity: 0;
+    }
+    /* #17 */
+    100%{
+        /* width: 80%; */
+        transform: scale(1) rotate(0deg) translate(-0%,0%);
+        /* transform:rotate(360deg) */
+        opacity: 0;
+    }
+    }
+
+
+
+
+.circle-effect-99 {
+  animation-name: circle-effect-99;
+  animation-fill-mode: forwards;
+  /* 開始するタイミング */
+  animation-delay: 600ms;
+  /* １回分の長さ */
+  animation-duration: 3200ms;
+
+  transform: scale(0.7);
+  opacity: 0;
+  transform-origin: center;
+  animation-timing-function: linear;
+  /*ease-outは最初早くてで後半に加速*/
+  /* animation-timing-function:ease-out;  */
+  /*順方向→逆方向の順で再生する*/
+  /* animation-direction:alternate; */
+
+  /* 標準の方向で再生されます */
+  animation-direction:normal;
+  /* 偶数回は順方向、奇数回は逆方向からの再生を繰り返します */
+  /* animation-direction:alternate-reverse; */
+  /* 再生を無限に繰り返す */
+  animation-iteration-count:infinite;
+}
+
+@keyframes circle-effect-99 {
+  /* #1 */
+  0% {
+    /* width: 100%; */
+    transform: scale(0.2) rotate(-0deg) translate(-108em,0%);
+    /* transform:rotate(0deg) */
+    opacity: 1.0;
+  }
+  6.23% {
+    /* width: 100%; */
+    transform: scale(0.2) rotate(-0deg) translate(108em,0%);
+    /* transform:rotate(0deg) */
+    opacity: 1.0;
+  }
+  6.24% {
+    /* width: 100%; */
+    transform: scale(0.2) rotate(-0deg) translate(108em,0%);
+    /* transform:rotate(0deg) */
+    opacity: 0.0;
+  }
+  6.24% {
+    /* width: 100%; */
+    transform: scale(0.2) rotate(-0deg) translate(-108em,0%);
+    /* transform:rotate(0deg) */
+    opacity: 0.0;
+  }
+/* #2 */
+  6.25% {
+    /* width: 100%; */
+    transform: scale(0.2) rotate(-0deg) translate(-108em,-0%);
+    /* transform:rotate(0deg) */
+    opacity: 1;
+  }
+  12.2%{
+    /* width: 80%; */
+    transform: scale(0.2) rotate(0deg) translate(108em,0%);
+    /* transform:rotate(360deg) */
+    opacity: 1;
+  }
+  12.3%{
+    /* width: 80%; */
+    transform: scale(0.2) rotate(0deg) translate(108em,0%);
+    /* transform:rotate(360deg) */
+    opacity: 0;
+  }
+  12.4%{
+    /* width: 80%; */
+    transform: scale(0.2) rotate(0deg) translate(-108em,0%);
+    /* transform:rotate(360deg) */
+    opacity: 0;
+  }
+/* #3 */
+  12.5%{
+    /* width: 80%; */
+    transform: scale(0.2) rotate(0deg) translate(-108em,0%);
+    /* transform:rotate(360deg) */
+    opacity: 1;
+  }
+  18.72%{
+    /* width: 80%; */
+    transform: scale(0.2) rotate(0deg) translate(108em,0%);
+    /* transform:rotate(360deg) */
+    opacity: 1;
+  }
+  18.73%{
+    /* width: 80%; */
+    transform: scale(0.2) rotate(0deg) translate(108em,0%);
+    /* transform:rotate(360deg) */
+    opacity: 0;
+  }
+  18.74%{
+    /* width: 80%; */
+    transform: scale(0.3) rotate(0deg) translate(64em,0%);
+    /* transform:rotate(360deg) */
+    opacity: 0;
+  }
+/* #4 */
+  18.75%{
+    /* width: 80%; */
+    transform: scale(0.3) rotate(0deg) translate(64em,0%);
+    /* transform:rotate(360deg) */
+    opacity: 0;
+  }
+  /* #5 */
+  24.99%{
+    /* width: 80%; */
+    transform: scale(0.3) rotate(0deg) translate(64em,0%);
+    /* transform:rotate(360deg) */
+    opacity: 0;
+  }
+  25%{
+    /* width: 80%; */
+    transform: scale(0.3) rotate(0deg) translate(64em,0%);
+    /* transform:rotate(360deg) */
+    opacity: 1;
+  }
+  31.22% {
+    /* width: 100%; */
+    transform: scale(0.3) rotate(-0deg) translate(-64em,0%);
+    /* transform:rotate(0deg) */
+    opacity: 1;
+  }
+  31.23% {
+    /* width: 100%; */
+    transform: scale(0.3) rotate(-0deg) translate(-64em,0%);
+    /* transform:rotate(0deg) */
+    opacity: 0;
+  }
+  31.24% {
+    /* width: 100%; */
+    transform: scale(0.3) rotate(-0deg) translate(64em,0%);
+    /* transform:rotate(0deg) */
+    opacity: 0.0;
+  }
+  /* #6 */
+  31.25% {
+    /* width: 100%; */
+    transform: scale(0.3) rotate(-0deg) translate(64em,0%);
+    /* transform:rotate(0deg) */
+    opacity: 1;
+  }
+  37.2%{
+    /* width: 80%; */
+    transform: scale(0.3) rotate(0deg) translate(-64em,0%);
+    /* transform:rotate(360deg) */
+    opacity: 1;
+  }
+  37.3%{
+    /* width: 80%; */
+    transform: scale(0.3) rotate(0deg) translate(-64em,0%);
+    /* transform:rotate(360deg) */
+    opacity: 0;
+  }
+  37.4%{
+    /* width: 80%; */
+    transform: scale(0.3) rotate(0deg) translate(64em,0%);
+    /* transform:rotate(360deg) */
+    opacity: 0;
+  }
+  /* #7 */
+  37.5%{
+    /* width: 80%; */
+    transform: scale(0.3) rotate(0deg) translate(64em,0%);
+    /* transform:rotate(360deg) */
+    opacity: 1;
+  }
+  43.72%{
+    /* width: 80%; */
+    transform: scale(0.3) rotate(0deg) translate(-64em,0%);
+    /* transform:rotate(360deg) */
+    opacity: 1;
+  }
+  43.73%{
+    /* width: 80%; */
+    transform: scale(0.3) rotate(0deg) translate(-64em,0%);
+    /* transform:rotate(360deg) */
+    opacity: 0;
+  }
+  43.74%{
+    /* width: 80%; */
+    transform: scale(0.3) rotate(0deg) translate(64em,0%);
+    /* transform:rotate(360deg) */
+    opacity: 0;
+  }
+  /* #8 */
+  43.75%{
+    /* width: 80%; */
+    transform: scale(0.3) rotate(0deg) translate(64em,0%);
+    /* transform:rotate(360deg) */
+    opacity: 0;
+  }
+ /* #9 */
+ 49.99%{
+    /* width: 80%; */
+    transform: scale(0.4) rotate(0deg) translate(0%,-54em);
+    /* transform:rotate(360deg) */
+    opacity: 0;
+  }
+  50%{
+    /* width: 80%; */
+    transform: scale(0.4) rotate(0deg) translate(0%,-54em);
+    /* transform:rotate(360deg) */
+    opacity: 1;
+  }
+  56.22% {
+    /* width: 100%; */
+    transform: scale(0.4) rotate(-0deg) translate(0%,54em);
+    /* transform:rotate(0deg) */
+    opacity: 1;
+  }
+  56.23% {
+    /* width: 100%; */
+    transform: scale(0.4) rotate(-0deg) translate(0%,54em);
+    /* transform:rotate(0deg) */
+    opacity: 0;
+  }
+  56.24% {
+    /* width: 100%; */
+    transform: scale(0.4) rotate(-0deg) translate(0%,-54em);
+    /* transform:rotate(0deg) */
+    opacity: 0;
+  }
+ /* #10 */
+  56.25% {
+    /* width: 100%; */
+    transform: scale(0.4) rotate(-0deg) translate(0%,-54em);
+    /* transform:rotate(0deg) */
+    opacity: 1;
+  }
+  62.2%{
+    /* width: 80%; */
+    transform: scale(0.4) rotate(0deg) translate(0%,54em);
+    /* transform:rotate(360deg) */
+    opacity: 1;
+  }
+  62.3%{
+    /* width: 80%; */
+    transform: scale(0.4) rotate(0deg) translate(0%,54em);
+    /* transform:rotate(360deg) */
+    opacity: 0;
+  }
+  62.4%{
+    /* width: 80%; */
+    transform: scale(0.4) rotate(0deg) translate(0%,-54em);
+    /* transform:rotate(360deg) */
+    opacity: 0;
+  }
+ /* #11 */
+  62.5%{
+    /* width: 80%; */
+    transform: scale(0.4) rotate(0deg) translate(0%,-54em);
+    /* transform:rotate(360deg) */
+    opacity: 1;
+  }
+  68.72%{
+    /* width: 80%; */
+    transform: scale(0.4) rotate(0deg) translate(0%,54em);
+    /* transform:rotate(360deg) */
+    opacity: 1;
+  }
+  68.73%{
+    /* width: 80%; */
+    transform: scale(0.4) rotate(0deg) translate(0%,54em);
+    /* transform:rotate(360deg) */
+    opacity: 0;
+  }
+  68.74%{
+    /* width: 80%; */
+    transform: scale(0.4) rotate(0deg) translate(0%,54em);
+    /* transform:rotate(360deg) */
+    opacity: 0;
+  }
+ /* #12 */
+  68.75%{
+    /* width: 80%; */
+    transform: scale(0.5) rotate(0deg) translate(0%,0%);
+    /* transform:rotate(360deg) */
+    opacity: 0;
+  }
+   /* #13 */
+  74.99%{
+    /* width: 80%; */
+    transform: scale(0.5) rotate(0deg) translate(0%,0%);
+    /* transform:rotate(360deg) */
+    opacity: 0;
+  }
+   75%{
+    /* width: 80%; */
+    transform: scale(0.5) rotate(0deg) translate(0%,0%);
+    /* transform:rotate(360deg) */
+    opacity: 1;
+  }
+   /* #14 */
+  81.25% {
+    /* width: 100%; */
+    transform: scale(0.5) rotate(-0deg) translate(0%,-0%);
+    /* transform:rotate(0deg) */
+    opacity: 1;
+  }
+   /* #15 */
+   87.49%{
+    /* width: 80%; */
+    transform: scale(0.5) rotate(0deg) translate(0%,0%);
+    /* transform:rotate(360deg) */
+    opacity: 0;
+  }
+   87.5%{
+    /* width: 80%; */
+    transform: scale(0.8) rotate(0deg) translate(0%,0%);
+    /* transform:rotate(360deg) */
+    opacity: 1;
+  }
+   /* #16 */
+  93.75%{
+    /* width: 80%; */
+    transform: scale(0.8) rotate(0deg) translate(0%,0%);
+    /* transform:rotate(360deg) */
+    opacity: 1;
+  }
+   /* #17 */
+   99.99%{
+    /* width: 80%; */
+    transform: scale(1) rotate(0deg) translate(0%,0%);
+    /* transform:rotate(360deg) */
+    opacity: 0;
+   }
+   100%{
+    /* width: 80%; */
+    transform: scale(1) rotate(0deg) translate(-108em,0%);
+    /* transform:rotate(360deg) */
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

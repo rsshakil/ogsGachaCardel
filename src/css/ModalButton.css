@@ -1,0 +1,98 @@
+.button-half-right.button-white {
+  /* box-shadow: inset 0px 2px 0px 0px rgb(255, 60, 60), inset 0px 4px 0px 0px rgb(255, 70, 70), inset 0px 6px 0px 0px rgb(254, 84, 84), inset 0px 8px 0px 0px rgb(255, 80, 80), inset 0px 10px 0px 0px rgb(248, 86, 86), inset 0px 14px 0px 0px rgb(249, 91, 91), inset 0px 16px 0px 0px rgb(252, 98, 98), inset 0px 19px 0px 0px rgb(255, 108, 108); */
+  box-shadow: 
+    inset 0px 2px 0px 0px rgb(143, 143, 143),
+    inset 0px 4px 0px 0px rgb(153, 153, 153),
+    inset 0px 6px 0px 0px rgb(163, 163, 163),
+    inset 0px 8px 0px 0px rgb(172, 172, 172),
+    inset 0px 10px 0px 0px rgb(183, 183, 183),
+    inset 0px 14px 0px 0px rgb(195, 195, 195),
+    inset 0px 16px 0px 0px rgb(202, 202, 202),
+    inset 0px 19px 0px 0px rgb(210, 210, 210);
+  /* background: linear-gradient(#ff3232, rgb(224, 58, 58), rgb(128, 0, 0)); */
+  background: linear-gradient(
+    #eaeaea, 
+    rgb(182, 182, 182),
+    rgb(94, 94, 94));
+}
+
+.button-full.button-green,
+.button-half-left.button-green,
+.button-half-right.button-green
+{
+  /* box-shadow: inset 0px 2px 0px 0px rgb(255, 60, 60), inset 0px 4px 0px 0px rgb(255, 70, 70), inset 0px 6px 0px 0px rgb(254, 84, 84), inset 0px 8px 0px 0px rgb(255, 80, 80), inset 0px 10px 0px 0px rgb(248, 86, 86), inset 0px 14px 0px 0px rgb(249, 91, 91), inset 0px 16px 0px 0px rgb(252, 98, 98), inset 0px 19px 0px 0px rgb(255, 108, 108); */
+  box-shadow: 
+  
+    inset 0px 2px 0px 0px rgb(67, 192, 91),
+    inset 0px 4px 0px 0px rgb(73, 198, 97),
+    inset 0px 6px 0px 0px rgb(78, 203, 102),
+    inset 0px 8px 0px 0px rgb(83, 207, 106),
+    inset 0px 10px 0px 0px rgb(86, 210, 109),
+    inset 0px 14px 0px 0px rgb(89, 213, 112),
+    inset 0px 16px 0px 0px rgb(92, 216, 115),
+    inset 0px 19px 0px 0px rgb(94, 218, 117);
+    /* inset 0px 19px 0px 0px rgb(206, 224, 11),
+    inset 0px 19px 0px 0px rgb(137, 255, 172),
+    inset 0px 19px 0px 0px rgb(137, 255, 172),
+    inset 0px 19px 0px 0px rgb(137, 255, 172) */
+    
+  /* background: linear-gradient(#ff3232, rgb(224, 58, 58), rgb(128, 0, 0)); */
+  background: linear-gradient(
+    rgb(55, 204, 100),
+    rgb(49, 204, 95),
+    rgb(2, 113, 35));
+}
+
+.button-full.button-white,
+.button-half-left.button-white,
+.button-half-right.button-white
+{
+  /* box-shadow: inset 0px 2px 0px 0px rgb(255, 60, 60), inset 0px 4px 0px 0px rgb(255, 70, 70), inset 0px 6px 0px 0px rgb(254, 84, 84), inset 0px 8px 0px 0px rgb(255, 80, 80), inset 0px 10px 0px 0px rgb(248, 86, 86), inset 0px 14px 0px 0px rgb(249, 91, 91), inset 0px 16px 0px 0px rgb(252, 98, 98), inset 0px 19px 0px 0px rgb(255, 108, 108); */
+  box-shadow: 
+    inset 0px 2px 0px 0px rgb(143, 143, 143),
+    inset 0px 4px 0px 0px rgb(153, 153, 153),
+    inset 0px 6px 0px 0px rgb(163, 163, 163),
+    inset 0px 8px 0px 0px rgb(172, 172, 172),
+    inset 0px 10px 0px 0px rgb(183, 183, 183),
+    inset 0px 14px 0px 0px rgb(195, 195, 195),
+    inset 0px 16px 0px 0px rgb(202, 202, 202),
+    inset 0px 19px 0px 0px rgb(210, 210, 210);
+  /* background: linear-gradient(#ff3232, rgb(224, 58, 58), rgb(128, 0, 0)); */
+  background: linear-gradient(
+    #eaeaea, 
+    rgb(182, 182, 182),
+    rgb(94, 94, 94));
+}
+.button-full.button-white.button-disable,
+.button-half-left.button-white.button-disable, 
+.button-half-right.button-white.button-disable,
+.button-full.button-white.button-disable:hover,
+.button-half-left.button-white.button-disable:hover, 
+.button-half-right.button-white.button-disable:hover
+{
+  cursor: not-allowed;
+  opacity: 1;
+
+  box-shadow:
+  inset 0px 1px 0px 0px rgb(13, 13, 13),
+  inset 0px 2px 0px 0px rgb(18, 18, 18),
+  inset 0px 3px 0px 0px rgb(26, 26, 26),
+  inset 0px 4px 0px 0px rgb(32, 32, 32),
+  inset 0px 6px 0px 0px rgb(44, 44, 44),
+  inset 0px 6px 0px 0px rgb(48, 48, 48),
+  inset 0px 8px 0px 0px rgb(62, 62, 62),
+  inset 0px 10px 0px 0px rgb(75, 75, 75),
+  inset 0px 12px 0px 0px rgb(84, 84, 84),
+  inset 0px 14px 0px 0px rgb(94, 94, 94),
+  inset 0px 15px 0px 0px rgb(103, 103, 103),
+  inset 0px 16px 0px 0px rgb(108, 108, 108),
+  inset 0px 17px 0px 0px rgb(113, 113, 113),
+  inset 0px 18px 0px 0px rgb(118, 118, 118),
+  inset 0px 19px 0px 0px rgb(123, 123, 123);
+
+  /* background: linear-gradient(#ff3232, rgb(224, 58, 58), rgb(128, 0, 0)); */
+  background: linear-gradient(
+    rgb(0, 0, 0),
+    rgb(130, 130, 130),
+    rgb(255, 255, 255));
+}
